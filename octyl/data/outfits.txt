@@ -1,5 +1,3 @@
-
-
 #for use later xD
 
 effect "ion beam impact"
@@ -43,7 +41,7 @@ outfit "Octyl Ion Beam"
 		"shield damage" 1.8
 		"hull damage" 3.3
 		"ion damage" .5
-	description "This is one of the more recent developments by the Octyl, now inundated with energy. While it is frighteningly power-hungry- especially for a species that was on the brink of starvation- their powerful solar panels coupled with their clever battery technology should be able to hold several of these powered simultaneously."
+	description "This is one of the more recent developments by the Octyl, who are now inundated with energy. While it is frighteningly power-hungry- especially for a species that was on the brink of starvation- their powerful solar panels coupled with their clever battery technology should be able to hold several of these powered simultaneously."
 
 outfit "Octyl Grapple Beam"
 	category "Guns"
