@@ -57,7 +57,7 @@ fleet "Heliarch Skylance"
 # Pallidus
 # Moschata
 # Nautilus (that thing with a pinhole eye)
-# Physalia (Portuguese Man o' War)
+# Physalia (Portuguese Man o' War) [x]
 
 
 ship "Octyl Kaurna"
