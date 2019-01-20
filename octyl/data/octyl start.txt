@@ -31,7 +31,7 @@ mission "Octyl in Coalition space [0]"
 			`	"Our thanks, we owe you," says the Saryd, "for such a great service, you will be providing us."`
 			`	"If you will," requests the Kimek, "follow our escort fleet to the system of interest."`
 			`	"The foreign visitors, we will speak to then," declares the Arachi.`
-			goto end
+				goto end
 
 			label questioning
 			`	"Answered here, your questions may be," reassures the Saryd, "Ask away, you may."`
@@ -109,12 +109,12 @@ mission "Octyl in Coalition space [1]"
 					goto skylance
 			`	"Good! Precautions, we take. Devastating foes, the Quarg were. A repeat, we the Heliarch do not want," says the Kimek.`
 			`	"Aggressive, we are being," notes the Arachi, "but losses we will not take. If friendly they are, attack we will not."`
-			goto prepare
+				goto prepare
 
 			label diplomacy
 			`	"Good! If diplomacy we need, provide your services will you?" asks the Kimek. It seems excited, "Devastating foes, the Quarg were. A repeat, we the Heliarch do not want."`
 			`	"Aggressive, we are being," notes the Arachi, "but losses we will not take. If friendly they are, attack we will not."`
-			goto prepare
+				goto prepare
 
 			label skylance
 			`	"Know Quarg technology, do you?" asks the Kimek. It seems excited, "Have a store of Quarg weapons, do you? Devastating foes, the Quarg were. A repeat, we the Heliarch do not want."`
