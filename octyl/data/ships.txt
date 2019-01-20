@@ -84,8 +84,12 @@ ship "Octyl Kaurna"
 			"hit force" 750
 	outfits
 		"Octyl Repulsor Cannon" 3
+		"Octyl Kinetic Cache" 5
+		"Octyl Kinetic Shell" 1075
 
-		"Octyl Charcoal Generator"
+		"Octyl Insectoid Restructurer"
+		"Octyl Dribble Battery"
+		"Octyl Luminance Innervator"
 		"Octyl Chill Motor"
 
 	gun 0 -40
@@ -117,14 +121,24 @@ ship "Octyl Cyanea"
 		"cargo space" 180
 		"outfit space" 308
 		"weapon capacity" 110
-		"engine capacity" 80
+		"engine capacity" 90
 		weapon
 			"blast radius" 90
 			"shield damage" 900
 			"hull damage" 450
 			"hit force" 1350
 	outfits
-		xd
+		"Octyl Repulsor Cannon" 5
+		"Octyl Spurner Turret"
+		"Octyl Kinetic Cache" 5
+		"Octyl Kinetic Shell" 1675
+
+		"Octyl Hull Refit" 14
+		"Octyl Insectoid Restructurer"
+		"Octyl Dribble Battery"
+		"Octyl Luminance Collector"
+		"Octyl Luminance Innervator" 2
+		"Octyl Cold Motor"
 	turret 1 -44
 	gun 0 -71
 	gun 38 -33
@@ -150,6 +164,7 @@ ship "Octyl Physalia"
 		mass 25000
 		drag 30
 		"geothermal capacity" 7
+		"heat generation" 70
 		"heat dissipation" .2
 		"fuel capacity" 500
 		"cargo space" 1000
@@ -162,10 +177,19 @@ ship "Octyl Physalia"
 			"hull damage" 10000
 			"hit force" 30000
 	outfits
+		"Octyl Deteriorator Turret" 4
+		"Octyl Kinetic Cache" 2
+		"Octyl Kinetic Shell" 1250
 
+		"Octyl Electromagnetic Detonator" 2
+		"Octyl Electromagnetic Charge" 120
 
+		"Octyl Hull Refit" 24
+		"Octyl Patternbreaker" 3
+		"Octyl Beam Geothermal"
+		"Octyl Oceanic Capacitor"
+		"Octyl Ray Geothermal"
 		"Octyl Generation Engine"
-
 	gun -102 40
 	gun 94 8
 
