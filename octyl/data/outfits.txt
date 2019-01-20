@@ -1,5 +1,3 @@
-#for use later xD
-
 effect "ion beam impact"
 	sprite "effect/ion particle"
 		"no repeat"
@@ -78,7 +76,7 @@ outfit "Octyl Repulsor Cannon"
 	"octyl shell capacity" 150
 	"gun ports" -1
 	weapon
-		sprite "projectile/octyl bullet small"
+		sprite "projectile/octyl bullet"
 		sound "explosion tiny"
 		"hit effect" "explosion tiny"
 		ammo "Octyl Kinetic Shell"
@@ -106,32 +104,73 @@ outfit "Octyl Spurner Turret"
 	"required crew" 1
 	"turret mounts" -1
 	weapon
-		sprite "projectile/octyl bullet small"
+		sprite "projectile/octyl bullet"
 		sound "explosion tiny"
 		"hit effect" "explosion tiny"
 		"hardpoint sprite" "hardpoint/octyl turret
 		ammo "Octyl Kinetic Shell"
 		icon "icon/gat"
-		"inaccuracy" 2.5
-		"velocity" 20
-		"lifetime" 60
-		"reload" 4
+		"turret turn" 4
+		"inaccuracy" 3
+		"velocity" 25
+		"lifetime" 45
+		"reload" 12
 		"firing energy" 12
 		"firing heat" 18
-		"firing force" 20
-		"shield damage" 150
-		"hull damage" 200
-		"hit force" 20
-	description "This ancient turret mounts two triple-barreled weapons similar to the Repulsor Cannon on a robust rotating turret. It fires around six times faster than the Repulsor Cannon, and the shots have a little more kick to them."
+		"firing force" 25
+		"shield damage" 180
+		"hull damage" 240
+		"hit force" 25
+	description "This ancient turret mounts two of the Repulsor Cannon on a robust rotating turret. The shots have a little more kick to them than a singular Repulsor on its own."
+
+outfit "Octyl Deteriorator Turret"
+	category "Secondary Weapons"
+	cost 1700000
+	thumbnail "outfit/octyl planetary defense"
+	"mass" 95
+	"outfit space" -100
+	"weapon capacity" -100
+	"octyl shell capacity" 250
+	"required crew" 3
+	"turret mounts" -1
+	weapon
+		sprite "projectile/octyl bullet"
+		sound "explosion tiny"
+		"hit effect" "explosion tiny"
+		"hardpoint sprite" "hardpoint/octyl turret
+		ammo "Octyl Kinetic Shell"
+		icon "icon/gat"
+		"turret turn" 1.5
+		"inaccuracy" 0.2
+		"velocity" 50
+		"lifetime" 120
+		"reload" 60
+		"firing energy" 12
+		"firing heat" 18
+		"firing force" 50
+		"shield damage" 1000
+		"hull damage" 1500
+		"hit force" 50
+	description
 
 outfit "Octyl Kinetic Cache"
 	category "Ammunition"
 	cost 20000
-	thumbnail "outfit/octyl bullet storage"
+	thumbnail "outfit/octyl bullet cache"
 	"mass" 1.5
 	"outfit space" -4
-	"ammo" "Octyl Repulsor Shell"
+	"ammo" "Octyl Kinetic Shell"
 	"octyl shell capacity" 125
+	description
+
+outfit "Octyl Kinetic Storage"
+	category "Ammunition"
+	cost
+	thumbnail "outfit/octyl bullet storage"
+	"mass" 4
+	"outfit space" -34
+	"ammo" "Octyl Kinetic Shell"
+	"octyl shell capacity" 1500
 	description
 
 outfit "Octyl Kinetic Shell"
@@ -141,6 +180,52 @@ outfit "Octyl Kinetic Shell"
 	"mass" .02
 	"octyl shell capacity" -1
 	description "Because the Octyl are so limited in energy, they have found physical-projectile weapons to be more effective and efficient than energy-based weapons like the Energy Blaster."
+
+
+
+outfit "Octyl Electromagnetic Detonator"
+	category "Secondary Weapons"
+	cost 60000
+	thumbnail "outfit/octyl missile"
+	"mass" 10
+	"outfit space" -25
+	"weapon capacity" -25
+	"gun ports" -1
+	"octyl charge capacity" 60
+	weapon
+		sprite "projectile/octyl bullet"
+		sound "octyl shoot"
+		"ammo" "Octyl Electromagnetic Charge"
+		"icon" "icon/nuke"
+		"hit effect" "nuke explosion"
+		"die effect" "missile death"
+		"inaccuracy" 1
+		"velocity" 5
+		"lifetime" 600
+		"reload" 60
+		"firing energy" 10
+		"firing heat" 60
+		"acceleration" .5
+		"drag" .025
+		"turn" 2
+		"homing" 4
+		"tracking" 1
+		"trigger radius" 100
+		"blast radius" 200
+		"shield damage" 500
+		"hull damage" 200
+		"ion damage" 10
+		"hit force" 150
+		"missile strength" 20
+	description
+
+outfit "Octyl Electromagnetic Charge"
+	category "Ammunition"
+	cost 800
+	thumbnail "outfit/octyl missile"
+	"mass" .25
+	"octyl charge capacity" -1
+	description
 
 
 
@@ -210,7 +295,7 @@ outfit "Octyl Flame Generator"
 
 outfit "Octyl Beam Geothermal"
 	category "Power"
-	cost
+	cost 10000
 	thumbnail "outfit/octyl small geothermal"
 	"mass" 2
 	"outfit space" -2
@@ -221,7 +306,7 @@ outfit "Octyl Beam Geothermal"
 
 outfit "Octyl Flash Geothermal"
 	category "Power"
-	cost
+	cost 200000
 	thumbnail "outfit/octyl medium geothermal"
 	"mass" 17
 	"outfit space" -17
@@ -232,7 +317,7 @@ outfit "Octyl Flash Geothermal"
 
 outfit "Octyl Ray Geothermal"
 	category "Power"
-	cost
+	cost 1600000
 	thumbnail "outfit/octyl small geothermal"
 	"mass" 92
 	"outfit space" -92
@@ -271,7 +356,43 @@ outfit "Octyl Oceanic Capacitor"
 	"outfit space" -500
 	"energy capacity" 300000
 	cooling 100
-	description "This is no outfit, this is a series of metal structures which transform a planetoid's subsurface ocean into one massive battery. On top of this, the transformation excites many geysers across the planetoid's surface, which causes a profound cooling effect."
+	description "This is no simple outfit, this is a series of metal structures which transform a planetoid's subsurface ocean into one massive battery. On top of this, the transformation excites many geysers across the planetoid's surface, which causes a profound cooling effect."
+
+
+
+outfit "Octyl Hull Refit"
+	category "Systems"
+	cost 10000
+	thumbnail "outfit/octyl self repair"
+	"mass" 1
+	"outfit space" -1
+	"hull" -20
+	"hull repair rate" .01
+	"hull heat" .1
+	"cooling inefficiency" .1
+	description "This procedure replaces a stretch of your metal hull with a weaker plastic one, which can slowly undo damage done to itself given heat and pressure."
+
+outfit "Octyl Insectoid Restructurer"
+	category "Systems"
+	cost 70000
+	thumbnail "outfit/octyl hull beetle"
+	"mass" 16
+	"outfit space" -16
+	"hull repair rate" .15
+	"hull energy" .05
+	"hull heat" .5
+	description "These hull-walking robots greatly resemble terrestrial beetles. They are equipped with miniature propulsion systems to move from point to point across your ship quickly and efficiently, to effectively undo stress and trauma done to your outer hull. They stop functioning, unfortunately, should the damage across the vessel become too severe."
+
+outfit "Octyl Patternbreaker"
+	category "Systems"
+	cost 220000
+	thumbnail "outfit/unknown"
+	"mass" 54
+	"outfit space" -54
+	"hull repair rate" .75
+	"hull energy" .25
+	"hull heat" 1.5
+	description "Exactly how this structure works is unknown, but it repairs damage to hull plating efficiently and effectively."
 
 
 
