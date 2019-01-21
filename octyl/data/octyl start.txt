@@ -205,7 +205,7 @@ mission "Octyl in Coalition space [2]"
 	npc kill
 		system "Lone Cloud"
 		government Octyl
-		personality waiting staying heroic
+		personality waiting staying heroic mute
 			confusion 25
 		ship "Octyl Physalia" "Esbinyar Enmaboryi Am"
 		ship "Octyl Physalia" "Xonomnu Zenermni"
@@ -249,3 +249,11 @@ mission "Octyl in Coalition space [2]"
 			label end
 			`	Without another word, the ships begin to rise faster, and you break atmosphere. There is no telling what could have arrived in Coalition space beyond that hyperspace link...`
 				depart
+	on enter "Lone Cloud"
+		dialog
+			`Upon jumping into the system, your scanners immediately pick up five giant ships in the system. Their communication systems appear to be malfunctioning, as they aren't responding to your hails.`
+	on complete
+		conversation
+			`[unfinished]`
+			`	[say something about one more ship on the scanners]`
+			`	[put a timer for two months before the next mission]`
