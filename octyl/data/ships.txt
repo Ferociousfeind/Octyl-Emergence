@@ -189,7 +189,7 @@ ship "Octyl Physalia"
 		"Octyl Beam Geothermal"
 		"Octyl Oceanic Capacitor"
 		"Octyl Ray Geothermal"
-		"Octyl Generation Engine"
+		"Octyl Generation Motor"
 	gun -102 40
 	gun 94 8
 
