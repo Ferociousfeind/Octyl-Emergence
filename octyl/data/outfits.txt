@@ -202,7 +202,7 @@ outfit "Octyl Electromagnetic Detonator"
 		"inaccuracy" 1
 		"velocity" 5
 		"lifetime" 600
-		"reload" 60
+		"reload" 180
 		"firing energy" 10
 		"firing heat" 60
 		"acceleration" .5
