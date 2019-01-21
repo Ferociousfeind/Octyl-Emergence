@@ -158,7 +158,7 @@ ship "Octyl Physalia"
 		category "Transport"
 		cost 160000000
 		shields 0
-		hull 250000
+		hull 85000
 		"required crew" 150
 		bunks 650
 		mass 25000
