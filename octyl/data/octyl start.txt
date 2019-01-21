@@ -1,5 +1,5 @@
 mission "Octyl in Coalition space [0]"
-	name "Presence requested on the <destionation>"
+	name "Presence requested on the Ring of Friendship"
 	description "The Heliarch have requested your presence as soon as possible on the <destination>. Find out what they want."
 	landing
 	to offer
@@ -55,7 +55,7 @@ mission "Octyl in Coalition space [0]"
 			`	"Not for very long, they have been here," answers the Saryd, "As soon as they appeared, you we contacted."`
 
 			label attacking2
-			`	"The Coalition, the have not yet attacked," explains the Kimek, "A dangerous move at any moment, they could make, we understand."
+			`	"The Coalition, they have not yet attacked," explains the Kimek, "A dangerous move at any moment, they could make, we understand."
 			`	"How strong they are, we do not know," the Arachi admits solemnly, "With force rivaling the Quarg, they might be able to attack. We do not know. Which is why you, to help us, we ask."`
 			`	After a moment of silence, the Saryd asks, "To ask us, do you have anything else, human <last>?"`
 
@@ -71,7 +71,7 @@ mission "Octyl in Coalition space [0]"
 				`	"This sounds like my kind of job. Do you have more details?"`
 				`	"This sounds risky to me, what else do you know?"`
 			label end
-			`	"In a vessel like a planet, the alien visitors have arrived. Anything, they have not done yet." explains the Saryd, before instructing, "Fly with us to the visitors, we need you to, and meet with them."
+			`	"In vessels like huge asteroids, the alien visitors have arrived. Anything, they have not done yet." explains the Saryd, before instructing, "Fly with us to the visitors, we need you to, and meet with them."
 			`	"If they are aggressive and do not want to negotiate," adds the Kimek, "we attack and push them out. If they do not respond to hails, we will explore their giant ship in search of them."`
 			`	"If to assist us you wish not, leave you may." says the Arachi, "But if to assist us you wish, meet the Heliarch again in the spaceport."`
 
@@ -84,6 +84,7 @@ mission "Octyl in Coalition space [1]"
 		has "Octyl in Coalition space [0]: done"
 	source "Ring of Friendship"
 	destination "Flowing Fields"
+	blocked "You have reached the convergence point specified, but you must have forgotten your Heliarch troupe! Wait for them to arrive in orbit, before returning here with them."
 	npc accompany
 		government Heliarch
 		personality heroic disables escort
@@ -235,7 +236,7 @@ mission "Octyl in Coalition space [2]"
 					goto diplomacy
 				`	"That's all I need to know. Let's go find them."`
 			`	"Of course. To Lone Cloud, everyone, move!" the Saryd announces. And into space the fleet rises...`
-				depart
+				launch
 			label attack
 			`	"Correct," the Saryd confirms.`
 			`	"How powerful they are we still do not know," warns the Kimek. The Arachi stays silent.`
@@ -248,7 +249,7 @@ mission "Octyl in Coalition space [2]"
 			`	"If we can even communicate we do not know," mutters the Arachi, before leaving the holographic display's range.`
 			label end
 			`	Without another word, the ships begin to rise faster, and you break atmosphere. There is no telling what could have arrived in Coalition space beyond that hyperspace link...`
-				depart
+				launch
 	on enter "Lone Cloud"
 		dialog
 			`Upon jumping into the system, your scanners immediately pick up five giant ships in the system. Their communication systems appear to be malfunctioning, as they aren't responding to your hails.`
