@@ -17,13 +17,32 @@ effect "ion beam fire"
 	"random velocity" 1.5
 	"velocity scale" 1.05
 
+effect "pulsator pop"
+	sprite "effect/pulsator"
+		"no repeat"
+		"frame rate" 20
+	"lifetime" 10
+	"random angle" 180
+	"random velocity" 3
+	"velocity scale" .1
+
+effect "pulsator hit"
+	sprite "effect/pulsator"
+		"no repeat"
+		"frame rate" 15
+	"lifetime" 13
+	"random angle" 45
+	"random velocity" 2
+	"velocity scale" -.25
+
 outfit "Octyl Ion Beam"
 	category "Guns"
-	cost 870000
+	cost 1270000
 	thumbnail "outfit/ion beam"
 	"mass" 50
 	"outfit space" -50
 	"weapon capacity" -50
+	"gun ports" -1
 	weapon
 		sprite "projectile/ion beam"
 			"frame rate" 10
@@ -39,15 +58,16 @@ outfit "Octyl Ion Beam"
 		"shield damage" 1.8
 		"hull damage" 3.3
 		"ion damage" .5
-	description "This is one of the more recent developments by the Octyl, who are now inundated with energy. While it is frighteningly power-hungry- especially for a species that was on the brink of starvation- their powerful solar panels coupled with their clever battery technology should be able to hold several of these powered simultaneously."
+	description "This is one of the more recent developments by the Octyl, who are now inundated with energy. While the Ion Beam is frighteningly power-hungry, especially for a species that was on the brink of starvation, their powerful solar panels coupled with their clever battery technology should be able to hold several of these powered simultaneously."
 
 outfit "Octyl Grapple Beam"
 	category "Guns"
-	cost 870000
+	cost 760000
 	thumbnail "outfit/grapple beam"
 	"mass" 22
 	"outfit space" -22
 	"weapon capacity" -22
+	"gun ports" -1
 	weapon
 		sprite "projectile/grapple beam"
 			"frame rate" 20
@@ -65,6 +85,33 @@ outfit "Octyl Grapple Beam"
 		"hull damage" 1.6
 		"hit force" -7
 	description "The Grapple Beam is an experimental new technology utilizing the now-inundating abundance of energy the Octyl have found themselves immersed with. By packing a tight beam with as much power as possible, it can briefly and very violently magnetize the hull of its target, pulling itself and the target closer together."
+
+outfit "Octyl Pulsator Turret"
+	category "Turrets"
+	cost 470000
+	thumbnail "outfit/pulsator"
+	"mass" 18
+	"outfit space" -18
+	"weapon capacity" -18
+	"turret mounts" -1
+	weapon
+		sprite "projectile/pulsator"
+			"frame rate" 10
+		sound "octyl shoot"
+		"hit effect" "pulsator pop" 9
+		"hit effect" "pulsator hit" 3
+		"turret turn" 3
+		"inaccuracy" 6
+		"velocity" 18
+		"lifetime" 45
+		"reload" 10
+		"firing energy" 60
+		"firing heat" 45
+		"firing force" 15
+		"shield damage" 56
+		"hull damage" 42
+		"hit force" 15
+	description
 
 outfit "Octyl Repulsor Cannon"
 	category "Secondary Weapons"
@@ -176,7 +223,7 @@ outfit "Octyl Kinetic Storage"
 outfit "Octyl Kinetic Shell"
 	category "Ammunition
 	cost 14
-	thumbnail "outfit/octyl bullet small"
+	thumbnail "outfit/octyl bullet"
 	"mass" .02
 	"octyl shell capacity" -1
 	description "Because the Octyl are so limited in energy, they have found physical-projectile weapons to be more effective and efficient than energy-based weapons like the Energy Blaster."
@@ -186,38 +233,70 @@ outfit "Octyl Kinetic Shell"
 outfit "Octyl Electromagnetic Detonator"
 	category "Secondary Weapons"
 	cost 60000
-	thumbnail "outfit/octyl missile"
+	thumbnail "outfit/octyl missile launcher"
 	"mass" 10
 	"outfit space" -25
 	"weapon capacity" -25
 	"gun ports" -1
 	"octyl charge capacity" 60
 	weapon
-		sprite "projectile/octyl bullet"
+		sprite "projectile/octyl missile"
+			"frame rate" 0
 		sound "octyl shoot"
+		"hit effect" "small explosion"
 		"ammo" "Octyl Electromagnetic Charge"
 		"icon" "icon/nuke"
-		"hit effect" "nuke explosion"
-		"die effect" "missile death"
+		"submunition" "octyl charge opening"
 		"inaccuracy" 1
-		"velocity" 5
+		"velocity" 8
 		"lifetime" 600
-		"reload" 180
-		"firing energy" 10
-		"firing heat" 60
-		"acceleration" .5
-		"drag" .025
-		"turn" 2
+		"reload" 30
+		"firing energy" 250
+		"firing heat" 100
+		"acceleration" .2
+		"drag" .02
+		"turn" 2.2
 		"homing" 4
-		"tracking" 1
-		"trigger radius" 100
-		"blast radius" 200
-		"shield damage" 500
-		"hull damage" 200
-		"ion damage" 10
-		"hit force" 150
-		"missile strength" 20
+		"optical tracking" .8
+		"radar tracking" .4
+		"split range" 250
+		"shield damage" -240
+		"hull damage" -10
+		"ion damage" -7
+		"hit force" -10
+		"missile strength" 42
 	description
+
+outfit "octyl charge opening"
+	weapon
+		sprite "projectile/octyl missile"
+			"frame rate" 20
+			"no repeat"
+		"hit effect" "small explosion"
+		"submunition" "octyl charge open"
+		"lifetime" 9
+		"shield damage" -500
+		"hull damage" -50
+		"ion damage" -20
+		"hit force" -60
+		"missile strength" 36
+
+outfit "octyl charge open"
+	weapon
+		sprite "projectile/octyl missile"
+			"start frame" 3
+			"frame rate" 20
+			"no repeat"
+		"hit effect" 
+		"hit effect" "nuke explosion"
+		"die effect" "nuke explosion"
+		"lifetime" 12
+		"blast radius" 200
+		"shield damage" 1000
+		"hull damage" 100
+		"ion damage" 30
+		"hit force" 80
+		"missile strength" 12
 
 outfit "Octyl Electromagnetic Charge"
 	category "Ammunition"
@@ -245,7 +324,7 @@ outfit "Octyl Luminance Innervator"
 	thumbnail "outfit/octyl solar medium"
 	"mass" 18
 	"outfit space" -18
-	"solar collection" 2.5
+	"solar collection" 2.2
 	"heat generation" .2
 	description "This large array of panels and pivots takes the static Octyl Luminance Collector, and makes it many times more efficient with tracking capabilities and a larger collecting area. On the other side, the machinery used to increase its efficiency creates a small bit of waste heat."
 
@@ -255,9 +334,9 @@ outfit "Octyl Millennium Luminance"
 	thumbnail "outfit/octyl solar large"
 	"mass" 109
 	"outfit space" -109
-	"solar collection" 40
-	"heat generation" 7.36
-	description "This massive array of mirrors and solar collectors meant to be deployed over several hundred acres is partially what powers the monstrous Octyl ship-worlds."
+	"solar collection" 13
+	"heat generation" 2.6
+	description "This massive array of mirrors and solar collectors, meant to be deployed over several hundred acres, is partially what powers the monstrous Octyl ship-worlds."
 
 
 
@@ -396,6 +475,18 @@ outfit "Octyl Patternbreaker"
 
 
 
+outfit "Octyl Venom Gun"
+	category "Hand to Hand"
+	cost 130000
+	thumbnail "outfit/octyl syringe gun"
+	"capture attack" 1.5
+	"capture defense" 4.8
+	"unplunderable" 1
+	description "This syringe gun contains the potent venom of the Octyl, enough to paralyze a grown man for several hours, and kill small children. It is not a very effective offensive weapon, however, and serves best as a defensive measure."
+	description "Even a small drop of the venom is capable of fueling this weapon for thousands of uses. However, restocking is a difficult process, involving extracting the substance from its natural environment, or purchasing it from a willing subject."
+
+
+
 outfit "Octyl Chill Motor"
 	category "Engines"
 	cost 170000
@@ -406,6 +497,9 @@ outfit "Octyl Chill Motor"
 	"thrust" 9
 	"thrusting energy" 0.675
 	"thrusting heat" 1.55
+	"flare sprite" "effect/ion flare/tiny"
+		"frame rate" 1.2
+	"flare sound" "ion tiny"
 	"turn" 650
 	"turning energy" 0.64
 	"turning heat" 1.44
@@ -421,6 +515,9 @@ outfit "Octyl Cold Motor"
 	"thrust" 17
 	"thrusting energy" 1.25
 	"thrusting heat" 2.86
+	"flare sprite" "effect/ion flare/medium"
+		"frame rate" 1.0
+	"flare sound" "ion medium"
 	"turn" 1242
 	"turning energy" 1.21
 	"turning heat" 2.7
@@ -435,6 +532,9 @@ outfit "Octyl Froze Motor"
 	"thrust" 44
 	"thrusting energy" 2.66
 	"thrusting heat" 6
+	"flare sprite" "effect/ion flare/large"
+		"frame rate" 0.9
+	"flare sound" "ion large"
 	"turn" 2808
 	"turning energy" 2.68
 	"turning heat" 5.96
@@ -449,6 +549,9 @@ outfit "Octyl Generation Motor"
 	"thrust" 330
 	"thrusting energy" 13.2
 	"thrusting heat" 29
+	"flare sprite" "effect/plasma flare/huge"
+		"frame rate" 5
+	"flare sound" "plasma huge"
 	"turn" 16900
 	"turning energy" 15.2
 	"turning heat" 33.4
