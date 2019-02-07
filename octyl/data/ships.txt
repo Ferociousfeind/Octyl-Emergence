@@ -65,8 +65,8 @@ ship "Octyl Kaurna"
 	attributes
 		category "Light Freighter"
 		cost 1100000
-		shields 0
-		hull 4000
+		shields 800
+		hull 3600
 		"required crew" 1
 		bunks 3
 		mass 150
@@ -101,7 +101,7 @@ ship "Octyl Kaurna"
 	explode "tiny explosion" 15
 	explode "small explosion" 5
 	explode "medium explosion" 5
-	description "Octyl ships are constructed with every scenario in mind. This one-man vessel is equipped with reasonable weapon and engine space, a spacious cargo hold, and two extra bunks should you be housing others."
+	description "This miniscule new-age Octyl vessel was designed with every scenario in mind. While the Kaurna carries a modest armament and decently-sized propulsion for combat situations, it also has a spacious cargo capacity and two additional bunks for more diplomatic events. The shields, however, are somewhat diminutive, given how new of a concept they are to the Octyl."
 
 
 
@@ -110,8 +110,8 @@ ship "Octyl Cyanea"
 	attributes
 		category "Light Warship"
 		cost 18000000
-		shields 0
-		hull 11500
+		shields 1300
+		hull 9400
 		"required crew" 2
 		bunks 12
 		mass 330
@@ -150,7 +150,7 @@ ship "Octyl Cyanea"
 	explode "small explosion" 10
 	explode "medium explosion" 10
 	"final explode" "final explosion small"
-	description "This Octyl ship is intended to be capable of serving itself in difficult environments. It boasts a decent weapons array, and a sizable cargo hold. One noticeable feature that is missing, however, is any form of shields."
+	description "This new-age Octyl ship is intended to be capable of maintining self-sufficience in unforgiving environments. It boasts a decent weapons array, and a sizable cargo hold. One alarming feature, however, is the lack of strong shields."
 
 ship "Octyl Physalia"
 	sprite "ship/octyl physalia"
