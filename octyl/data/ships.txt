@@ -150,7 +150,7 @@ ship "Octyl Cyanea"
 	explode "small explosion" 10
 	explode "medium explosion" 10
 	"final explode" "final explosion small"
-	description "This new-age Octyl ship is intended to be capable of maintining self-sufficience in unforgiving environments. It boasts a decent weapons array, and a sizable cargo hold. One alarming feature, however, is the lack of strong shields."
+	description "This new-age Octyl ship is intended to be capable of maintining self-sufficience in unforgiving environments. It boasts a decent weapons array, and a sizable cargo hold. One alarming feature, however, is the lack of a strong shield presence."
 
 ship "Octyl Physalia"
 	sprite "ship/octyl physalia"
