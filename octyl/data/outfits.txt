@@ -80,10 +80,10 @@ outfit "Octyl Grapple Beam"
 		"reload" 1
 		"firing energy" 12
 		"firing heat" 5
-		"firing force" -7
+		"firing force" -11
 		"shield damage" 1.2
 		"hull damage" 1.6
-		"hit force" -7
+		"hit force" -11
 	description "The Grapple Beam is an experimental new technology utilizing the now-inundating abundance of energy the Octyl have found themselves immersed with. By packing a tight beam with as much power as possible, it can briefly and very violently magnetize the hull of its target, pulling itself and the target closer together."
 
 outfit "Octyl Pulsator Turret"
@@ -134,10 +134,10 @@ outfit "Octyl Repulsor Cannon"
 		"reload" 24
 		"firing energy" 12
 		"firing heat" 18
-		"firing force" 15
+		"firing force" 30
 		"shield damage" 120
 		"hull damage" 160
-		"hit force" 15
+		"hit force" 30
 	description "This ancient Octyl weapon is incredibly efficient. Except, of course, in the material department, which reflects the Octyl situation rather well. For much of their existence, energy had been the main concern, and matter was more than abundant."
 
 outfit "Octyl Spurner Turret"
@@ -164,10 +164,10 @@ outfit "Octyl Spurner Turret"
 		"reload" 12
 		"firing energy" 12
 		"firing heat" 18
-		"firing force" 25
+		"firing force" 50
 		"shield damage" 180
 		"hull damage" 240
-		"hit force" 25
+		"hit force" 50
 	description "This ancient turret mounts two of the Repulsor Cannon on a robust rotating turret. The shots have a little more kick to them than a singular Repulsor on its own."
 
 outfit "Octyl Deteriorator Turret"
@@ -194,10 +194,10 @@ outfit "Octyl Deteriorator Turret"
 		"reload" 60
 		"firing energy" 12
 		"firing heat" 18
-		"firing force" 50
+		"firing force" 100
 		"shield damage" 1000
 		"hull damage" 1500
-		"hit force" 50
+		"hit force" 100
 	description
 
 outfit "Octyl Kinetic Cache"
@@ -230,21 +230,21 @@ outfit "Octyl Kinetic Shell"
 
 
 
-outfit "Octyl Electromagnetic Detonator"
+outfit "Octyl Shield Detonator"
 	category "Secondary Weapons"
 	cost 60000
 	thumbnail "outfit/octyl missile launcher"
-	"mass" 10
+	"mass" 17.5
 	"outfit space" -25
 	"weapon capacity" -25
 	"gun ports" -1
-	"octyl charge capacity" 60
+	"octyl charge capacity" 30
 	weapon
 		sprite "projectile/octyl missile"
 			"frame rate" 0
 		sound "octyl shoot"
 		"hit effect" "small explosion"
-		"ammo" "Octyl Electromagnetic Charge"
+		"ammo" "Octyl Shield Charge"
 		"icon" "icon/nuke"
 		"submunition" "octyl charge opening"
 		"inaccuracy" 1
@@ -298,7 +298,7 @@ outfit "octyl charge open"
 		"hit force" 80
 		"missile strength" 12
 
-outfit "Octyl Electromagnetic Charge"
+outfit "Octyl Shield Charge"
 	category "Ammunition"
 	cost 800
 	thumbnail "outfit/octyl missile"
@@ -308,28 +308,40 @@ outfit "Octyl Electromagnetic Charge"
 
 
 
-outfit "Octyl Enlightenment Shield"
+outfit "Octyl Awakening Shield"
 	category "Systems"
-	cost 36000
+	cost 75000
 	thumbnail "outfit/octyl shield small"
+	"mass" 9
+	"outfit space" -9
+	"shields" 220
+	"shield generation" .2
+	"shield energy" .6
+	"shield heat" .4
+	description "This prototype shield system produces a modest shield matrix which encases many new-age Octyl ships, and has the capability of regenerating such a matrix should trauma cause it to dispel. This concept has already been captured by most other races, though only the Octyl have such a device to increase one's native shield matrix."
+
+outfit "Octyl Cultivation Shield"
+	category "Systems"
+	cost 340000
+	thumbnail "outfit/octyl shield medium"
 	"mass" 28
 	"outfit space" -28
 	"shields" 310
-	"shield generation" .4
-	"shield energy" 1.2
-	"shield heat" .8
+	"shield generation" 1.7
+	"shield energy" 5.1
+	"shield heat" 3.4
 	description "New-age Octyl technology is somewhat more powerful than human equipment you're familiar with, but is very energy-inefficient, banking on the efficiency of their solar panels to keep them afloat."
 
-outfit "Octyl Revelation Shield"
+outfit "Octyl Enlightenment Shield"
 	category "Systems"
-	cost 880000
+	cost 1980000
 	thumbnail "outfit/octyl shield large"
 	"mass" 84
 	"outfit space" -84
 	"shields" 1160
-	"shield generation" 1.6
-	"shield energy" 4.8
-	"shield heat" 3.2
+	"shield generation" 6.7
+	"shield energy" 20.1
+	"shield heat" 13.4
 	description "This shielding system is crude and inefficient, though it does one thing that human shielding systems can't do. Alongside an alarming amount of energy for an above-average shield regeneration, this system increases the native shield capacity of your ship."
 
 
@@ -341,7 +353,7 @@ outfit "Octyl Luminance Collector"
 	"mass" 2
 	"outfit space" -2
 	"solar collection" .2
-	"heat generation" .012
+	"heat generation" .013
 	description "This compact solar panel is the lifeblood of the Octyl. It is powerful enough that a small array can fuel many of the Octyl's energy requirements."
 
 outfit "Octyl Luminance Innervator"
@@ -350,8 +362,8 @@ outfit "Octyl Luminance Innervator"
 	thumbnail "outfit/octyl solar medium"
 	"mass" 18
 	"outfit space" -18
-	"solar collection" 2.2
-	"heat generation" .2
+	"solar collection" 2.9
+	"heat generation" .17
 	description "This large array of panels and pivots takes the static Octyl Luminance Collector, and makes it many times more efficient with tracking capabilities and a larger collecting area. On the other side, the machinery used to increase its efficiency creates a small amount of waste heat."
 
 outfit "Octyl Millennium Luminance"
@@ -360,8 +372,8 @@ outfit "Octyl Millennium Luminance"
 	thumbnail "outfit/octyl solar large"
 	"mass" 109
 	"outfit space" -109
-	"solar collection" 13
-	"heat generation" 1.8
+	"solar collection" 19.8
+	"heat generation" 2.8
 	description "This massive array of mirrors and solar collectors, meant to be deployed over several hundred acres, is partially what powers the monstrous Octyl ship-worlds."
 
 
