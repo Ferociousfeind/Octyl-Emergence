@@ -549,9 +549,9 @@ outfit "Octyl Generation Motor"
 	"thrust" 330
 	"thrusting energy" 13.2
 	"thrusting heat" 29
-	"flare sprite" "effect/plasma flare/huge"
+	"flare sprite" "effect/ion flare/huge"
 		"frame rate" 5
-	"flare sound" "plasma huge"
+	"flare sound" "ion huge"
 	"turn" 16900
 	"turning energy" 15.2
 	"turning heat" 33.4
