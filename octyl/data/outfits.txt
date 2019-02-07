@@ -308,6 +308,32 @@ outfit "Octyl Electromagnetic Charge"
 
 
 
+outfit "Octyl Enlightenment Shield"
+	category "Systems"
+	cost 36000
+	thumbnail "outfit/octyl shield small"
+	"mass" 28
+	"outfit space" -28
+	"shields" 310
+	"shield generation" .4
+	"shield energy" 1.2
+	"shield heat" .8
+	description "New-age Octyl technology is somewhat more powerful than human equipment you're familiar with, but is very energy-inefficient, banking on the efficiency of their solar panels to keep them afloat."
+
+outfit "Octyl Revelation Shield"
+	category "Systems"
+	cost 880000
+	thumbnail "outfit/octyl shield large"
+	"mass" 84
+	"outfit space" -84
+	"shields" 1160
+	"shield generation" 1.6
+	"shield energy" 4.8
+	"shield heat" 3.2
+	description "This shielding system is crude and inefficient, though it does one thing that human shielding systems can't do. Alongside an alarming amount of energy for an above-average shield regeneration, this system increases the native shield capacity of your ship."
+
+
+
 outfit "Octyl Luminance Collector"
 	category "Power"
 	cost 15000
@@ -326,7 +352,7 @@ outfit "Octyl Luminance Innervator"
 	"outfit space" -18
 	"solar collection" 2.2
 	"heat generation" .2
-	description "This large array of panels and pivots takes the static Octyl Luminance Collector, and makes it many times more efficient with tracking capabilities and a larger collecting area. On the other side, the machinery used to increase its efficiency creates a small bit of waste heat."
+	description "This large array of panels and pivots takes the static Octyl Luminance Collector, and makes it many times more efficient with tracking capabilities and a larger collecting area. On the other side, the machinery used to increase its efficiency creates a small amount of waste heat."
 
 outfit "Octyl Millennium Luminance"
 	category "Power"
@@ -335,7 +361,7 @@ outfit "Octyl Millennium Luminance"
 	"mass" 109
 	"outfit space" -109
 	"solar collection" 13
-	"heat generation" 2.6
+	"heat generation" 1.8
 	description "This massive array of mirrors and solar collectors, meant to be deployed over several hundred acres, is partially what powers the monstrous Octyl ship-worlds."
 
 
@@ -381,7 +407,7 @@ outfit "Octyl Beam Geothermal"
 	"geothermal capacity" -1
 	"energy generation" 1.1
 	"cooling" .6
-	description "This simple geothermal generator turns a planetoid's latent inner heat into useable energy, whilst cooling the outfit-bearing, outer shell somewhat."
+	description "This simple geothermal generator turns a planetoid's latent inner heat into useable energy, whilst cooling the outfit-bearing, outer shell to some degree."
 
 outfit "Octyl Flash Geothermal"
 	category "Power"
@@ -403,7 +429,7 @@ outfit "Octyl Ray Geothermal"
 	"geothermal capacity" -3
 	"energy generation" 9.9
 	"cooling" 9.6
-	description "Octyl technology is strikingly efficient, and this geothermal tower, while massive, is much more efficient than the next step down, which is itself twice as efficient as the step after it. This comes at a cost, as this tower is five-and-a-half times larger than the next step down."
+	description "old-age Octyl technology is strikingly efficient, and this geothermal tower, while massive, is much more efficient than the next step down, which is itself twice as efficient as the step after it. This comes at a cost, as this tower is five-and-a-half times larger than the next step down."
 
 
 
