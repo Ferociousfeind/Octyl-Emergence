@@ -55,8 +55,8 @@ fleet "Heliarch Skylance"
 # Lunulata (or Hapalochlaena but also too long) (Blue-Ringed Octopus)
 # Maya
 # Pallidus
-# Moschata
-# Nautilus (that thing with a pinhole eye)
+# Moschata (musky octopus) [x]
+# Nautilus (that thing with a pinhole eye) [x]
 # Physalia (Portuguese Man o' War) [x]
 
 
@@ -153,7 +153,7 @@ ship "Octyl Cyanea"
 	description "This new-age Octyl ship is intended to be capable of maintaining self-sufficiency in unforgiving environments. It boasts a decent weapons array, and a sizable cargo hold. One alarming feature, however, is the lack of a strong shield presence."
 
 ship "Octyl Moschata"
-	sprite "ship/octyl moschata"
+	sprite "ship/moschata"
 	attributes
 		category "Medium Warship"
 		cost 22000000
@@ -162,12 +162,12 @@ ship "Octyl Moschata"
 		"required crew" 23
 		bunks 37
 		mass 290
-		drag 3.8
-		"heat dissipation" .65
+		drag 3.6
+		"heat dissipation" .6
 		"fuel capacity" 400
-		"cargo space" 146
-		"outfit space" 442
-		"weapon capacity" 133
+		"cargo space" 140
+		"outfit space" 496
+		"weapon capacity" 222
 		"engine capacity" 140
 		weapon
 			"blast radius" 80
@@ -176,8 +176,17 @@ ship "Octyl Moschata"
 			"hit force" 1200
 		outfits
 
+	turret 65 -73
+	turret -65 -73
+	turret 86 28
+	turret -86 28
+	turret 35 114
+	turret -35 114
+	engine 0 40 1
+	description
+
 ship "Octyl Nautilus"
-	sprite "ship/octyl nautilus"
+	sprite "ship/nautilus"
 	attributes
 		category "Transport"
 		cost 160000000
@@ -269,7 +278,7 @@ ship "Octyl Nautilus" "Octyl Nautilus (mission)"
 		"Octyl Generation Motor"
 
 ship "Octyl Physalia"
-	sprite "ship/octyl physalia"
+	sprite "ship/physalia"
 	attributes
 		category "Transport"
 		cost 8500000000000
