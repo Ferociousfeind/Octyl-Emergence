@@ -117,10 +117,10 @@ outfit "Octyl Repulsor Cannon"
 	category "Secondary Weapons"
 	cost 110000
 	thumbnail "outfit/octyl gun small"
-	"mass" 7
+	"mass" 5
 	"outfit space" -10
 	"weapon capacity" -10
-	"octyl shell capacity" 150
+	"octyl shell capacity" 250
 	"gun ports" -1
 	weapon
 		sprite "projectile/octyl bullet"
@@ -134,7 +134,7 @@ outfit "Octyl Repulsor Cannon"
 		"reload" 24
 		"firing energy" 12
 		"firing heat" 18
-		"firing force" 30
+		"firing force" 10
 		"shield damage" 120
 		"hull damage" 160
 		"hit force" 30
@@ -144,17 +144,17 @@ outfit "Octyl Spurner Turret"
 	category "Secondary Weapons"
 	cost 450000
 	thumbnail "outfit/octyl gun large"
-	"mass" 31
+	"mass" 25
 	"outfit space" -37
 	"weapon capacity" -37
-	"octyl shell capacity" 300
+	"octyl shell capacity" 550
 	"required crew" 1
 	"turret mounts" -1
 	weapon
+		"hardpoint sprite" "hardpoint/octyl turret
 		sprite "projectile/octyl bullet"
 		sound "explosion tiny"
 		"hit effect" "explosion tiny"
-		"hardpoint sprite" "hardpoint/octyl turret
 		ammo "Octyl Kinetic Shell"
 		icon "icon/gat"
 		"turret turn" 4
@@ -164,10 +164,10 @@ outfit "Octyl Spurner Turret"
 		"reload" 12
 		"firing energy" 12
 		"firing heat" 18
-		"firing force" 50
+		"firing force" 20
 		"shield damage" 180
 		"hull damage" 240
-		"hit force" 50
+		"hit force" 60
 	description "This ancient turret mounts two of the Repulsor Cannon on a robust rotating turret. The shots have a little more kick to them than a singular Repulsor on its own."
 
 outfit "Octyl Deteriorator Turret"
@@ -194,10 +194,10 @@ outfit "Octyl Deteriorator Turret"
 		"reload" 60
 		"firing energy" 12
 		"firing heat" 18
-		"firing force" 100
+		"firing force" 40
 		"shield damage" 1000
 		"hull damage" 1500
-		"hit force" 100
+		"hit force" 120
 	description
 
 outfit "Octyl Kinetic Cache"
@@ -366,7 +366,7 @@ outfit "Octyl Luminance Innervator"
 	"heat generation" .17
 	description "This large array of panels and pivots takes the static Octyl Luminance Collector, and makes it many times more efficient with tracking capabilities and a larger collecting area. On the other side, the machinery used to increase its efficiency creates a small amount of waste heat."
 
-outfit "Octyl Millennium Luminance"
+outfit "Octyl Luminance Synchronizer"
 	category "Power"
 	cost 1500000
 	thumbnail "outfit/octyl solar large"
@@ -455,17 +455,17 @@ outfit "Octyl Dribble Battery"
 	cooling 2.1
 	description "This is a pair of ten-ton metal towers that dig into a pocket of water, saturate it with salts, and transform it into one giant battery. It's not as efficient as a totally artificial battery, but it's very resourceful. Disregarding the prerequisite for a liquid body, it's frighteningly efficient."
 
-outfit "Octyl Splash Battery"
+outfit "Octyl Drop Battery"
 	category "Power"
 	cost 360000
 	thumbnail "outfit/unknown"
 	mass 80
 	"outfit space" -80
-	"energy capacity" 280000
+	"energy capacity" 28000
 	cooling 9.3
 	description "These heavy metal rods are inserted into a body of water, with a barrier between two halves, which creates one massive battery. Addition of electrolytic salts and other compounds enhance the battery's capacity greatly, and a side effect of this method is a noticeable cooling effect across the entire pool of water."
 
-outfit "Octyl Oceanic Capacitor"
+outfit "Octyl Drum Battery"
 	category "Power"
 	cost 3750000
 	thumbnail "outfit/unknown"
@@ -541,7 +541,7 @@ outfit "Octyl Chill Motor"
 	"turn" 650
 	"turning energy" 0.64
 	"turning heat" 1.44
-	description "This is a unique thrusting system, which combines turning and thrusting into one set of engines, the nature of such a combination making the functions essentially inseparable
+	description "This is a unique thrusting system, which combines turning and thrusting into one set of engines, the nature of such a combination making the functions essentially inseparable."
 
 outfit "Octyl Cold Motor"
 	category "Engines"
