@@ -16,7 +16,7 @@ mission "Octyl in Coalition space [0]"
 			`You are escorted to a private docking bay on <planet> by a few Heliarch warships, and are greeted by a trifecta of the Heliarch as you disembark your vessel. A Saryd, a Kimek, and an Arachi, wearing golden Heliarch circlets.`
 			`	"A great service," the Saryd starts, "we require of you. The first human in Coalition space, you are, and our most recent alien encounter, you have become."`
 			`	"Like family, the three races of the coalition have become," explains the Kimek. "Forgotten how to negotiate well, we have, and comfortable with our friendship we have grown."`
-			`	"Foreign arrivals, there are," the Arachi explains with a hint of urgency, "what to do with them, we know not. Help us, will you?"
+			`	"Foreign arrivals, there are," the Arachi explains with a hint of urgency, "what to do with them, we know not. Help us, will you?"`
 			choice
 				`	"Yes, I can help you with alien invaders."`
 					goto agree
@@ -40,11 +40,11 @@ mission "Octyl in Coalition space [0]"
 					goto "how long"
 				`	"Have the aliens attacked you yet?"`
 					goto attacking
-				`	"No, just show me where they are."
+				`	"No, just show me where they are."`
 					goto end
 
 			label "how long"
-			`	"For not very long, the visitors have been among us," answers the Saryd, "As soon as they arrived, we contacted you."
+			`	"For not very long, the visitors have been among us," answers the Saryd, "As soon as they arrived, we contacted you."`
 			choice
 				`	"Have the aliens attacked you yet?"`
 					goto attacking2
@@ -55,13 +55,13 @@ mission "Octyl in Coalition space [0]"
 			`	"Not for very long, they have been here," answers the Saryd, "As soon as they appeared, you we contacted."`
 
 			label attacking2
-			`	"The Coalition, they have not yet attacked," explains the Kimek, "A dangerous move at any moment, they could make, we understand."
+			`	"The Coalition, they have not yet attacked," explains the Kimek, "A dangerous move at any moment, they could make, we understand."`
 			`	"How strong they are, we do not know," the Arachi admits solemnly, "With force rivaling the Quarg, they might be able to attack. We do not know. Which is why you, to help us, we ask."`
 			`	After a moment of silence, the Saryd asks, "To ask us, do you have anything else, human <last>?"`
 
 			choice
 				`	"What if they attack, and you can't defend yourselves?"`
-				`	"No, that is all, thank you. Do you know anything else of importance?"
+				`	"No, that is all, thank you. Do you know anything else of importance?"`
 					goto end
 			`	The three look between each other, before the Arachi answers, "Run, we will, and your help we will ask for."`
 			`	After a longer and more tense silence, the Saryd explained, "Uncertain, we are. Emotional and afraid, we are."`
@@ -71,7 +71,7 @@ mission "Octyl in Coalition space [0]"
 				`	"This sounds like my kind of job. Do you have more details?"`
 				`	"This sounds risky to me, what else do you know?"`
 			label end
-			`	"In vessels like huge asteroids, the alien visitors have arrived. Anything, they have not done yet." explains the Saryd, before instructing, "Fly with us to the visitors, we need you to, and meet with them."
+			`	"In vessels like huge asteroids, the alien visitors have arrived. Anything, they have not done yet." explains the Saryd, before instructing, "Fly with us to the visitors, we need you to, and meet with them."`
 			`	"If they are aggressive and do not want to negotiate," adds the Kimek, "we attack and push them out. If they do not respond to hails, we will explore their giant ship in search of them."`
 			`	"If to assist us you wish not, leave you may." says the Arachi, "But if to assist us you wish, meet the Heliarch again in the spaceport."`
 
@@ -106,7 +106,7 @@ mission "Octyl in Coalition space [1]"
 				`	"Yes, I have weapons."`
 				`	"No, I am here to talk to the aliens."`
 					goto diplomacy
-				`	"Are those Quarg Skylances?"
+				`	"Are those Quarg Skylances?"`
 					goto skylance
 			`	"Good! Precautions, we take. Devastating foes, the Quarg were. A repeat, we the Heliarch do not want," says the Kimek.`
 			`	"Aggressive, we are being," notes the Arachi, "but losses we will not take. If friendly they are, attack we will not."`
@@ -135,7 +135,7 @@ mission "Octyl in Coalition space [1]"
 			label logistics
 			`	"So much power, the Quarg Skylances use," pipes in an Arachi, "Batteries, we must rely on. Enough power, our reactors cannot provide. But in bursts, if we fire, just as strong the weapons remain."`
 			`	"Please," says a Saryd, "To the visitors, follow us if you wish."`
-			`	"Gather strength, we will," clarifies a Kimek, "Unite our forces we will, on the Saryd world Flowing Fields.
+			`	"Gather strength, we will," clarifies a Kimek, "Unite our forces we will, on the Saryd world Flowing Fields.`
 				accept
 	on complete
 		conversation 
@@ -149,7 +149,7 @@ mission "Octyl in Coalition space [1]"
 				`	"If we talk to them, whatever they are, maybe we don't have to fight."`
 				`	"Maybe your Skylances are enough to scare them away."`
 			`	"Maybe," says the Saryd solemnly, "All we can do is hope."`
-			`	"Meet we the Heliarch back in the spaceport," says the Kimek, "when you are ready."
+			`	"Meet we the Heliarch back in the spaceport," says the Kimek, "when you are ready."`
 
 
 
