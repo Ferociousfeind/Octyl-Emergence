@@ -17,13 +17,32 @@ effect "ion beam fire"
 	"random velocity" 1.5
 	"velocity scale" 1.05
 
+effect "pulsator pop"
+	sprite "effect/pulsator"
+		"no repeat"
+		"frame rate" 20
+	"lifetime" 10
+	"random angle" 180
+	"random velocity" 3
+	"velocity scale" .1
+
+effect "pulsator hit"
+	sprite "effect/pulsator"
+		"no repeat"
+		"frame rate" 15
+	"lifetime" 13
+	"random angle" 45
+	"random velocity" 2
+	"velocity scale" -.25
+
 outfit "Octyl Ion Beam"
 	category "Guns"
-	cost 870000
+	cost 1270000
 	thumbnail "outfit/ion beam"
 	"mass" 50
 	"outfit space" -50
 	"weapon capacity" -50
+	"gun ports" -1
 	weapon
 		sprite "projectile/ion beam"
 			"frame rate" 10
@@ -39,15 +58,16 @@ outfit "Octyl Ion Beam"
 		"shield damage" 1.8
 		"hull damage" 3.3
 		"ion damage" .5
-	description "This is one of the more recent developments by the Octyl, who are now inundated with energy. While it is frighteningly power-hungry- especially for a species that was on the brink of starvation- their powerful solar panels coupled with their clever battery technology should be able to hold several of these powered simultaneously."
+	description "This is one of the more recent developments by the Octyl, who are now inundated with energy. While the Ion Beam is frighteningly power-hungry, especially for a species that was on the brink of starvation, their powerful solar panels coupled with their clever battery technology should be able to hold several of these powered simultaneously."
 
 outfit "Octyl Grapple Beam"
 	category "Guns"
-	cost 870000
+	cost 760000
 	thumbnail "outfit/grapple beam"
 	"mass" 22
 	"outfit space" -22
 	"weapon capacity" -22
+	"gun ports" -1
 	weapon
 		sprite "projectile/grapple beam"
 			"frame rate" 20
@@ -60,20 +80,47 @@ outfit "Octyl Grapple Beam"
 		"reload" 1
 		"firing energy" 12
 		"firing heat" 5
-		"firing force" -7
+		"firing force" -11
 		"shield damage" 1.2
 		"hull damage" 1.6
-		"hit force" -7
+		"hit force" -11
 	description "The Grapple Beam is an experimental new technology utilizing the now-inundating abundance of energy the Octyl have found themselves immersed with. By packing a tight beam with as much power as possible, it can briefly and very violently magnetize the hull of its target, pulling itself and the target closer together."
+
+outfit "Octyl Pulsator Turret"
+	category "Turrets"
+	cost 470000
+	thumbnail "outfit/pulsator"
+	"mass" 18
+	"outfit space" -18
+	"weapon capacity" -18
+	"turret mounts" -1
+	weapon
+		sprite "projectile/pulsator"
+			"frame rate" 10
+		sound "octyl shoot"
+		"hit effect" "pulsator pop" 9
+		"hit effect" "pulsator hit" 3
+		"turret turn" 3
+		"inaccuracy" 6
+		"velocity" 18
+		"lifetime" 45
+		"reload" 10
+		"firing energy" 60
+		"firing heat" 45
+		"firing force" 15
+		"shield damage" 56
+		"hull damage" 42
+		"hit force" 15
+	description
 
 outfit "Octyl Repulsor Cannon"
 	category "Secondary Weapons"
 	cost 110000
 	thumbnail "outfit/octyl gun small"
-	"mass" 7
+	"mass" 5
 	"outfit space" -10
 	"weapon capacity" -10
-	"octyl shell capacity" 150
+	"octyl shell capacity" 250
 	"gun ports" -1
 	weapon
 		sprite "projectile/octyl bullet"
@@ -87,27 +134,27 @@ outfit "Octyl Repulsor Cannon"
 		"reload" 24
 		"firing energy" 12
 		"firing heat" 18
-		"firing force" 15
+		"firing force" 10
 		"shield damage" 120
 		"hull damage" 160
-		"hit force" 15
+		"hit force" 30
 	description "This ancient Octyl weapon is incredibly efficient. Except, of course, in the material department, which reflects the Octyl situation rather well. For much of their existence, energy had been the main concern, and matter was more than abundant."
 
 outfit "Octyl Spurner Turret"
 	category "Secondary Weapons"
 	cost 450000
 	thumbnail "outfit/octyl gun large"
-	"mass" 31
+	"mass" 25
 	"outfit space" -37
 	"weapon capacity" -37
-	"octyl shell capacity" 300
+	"octyl shell capacity" 550
 	"required crew" 1
 	"turret mounts" -1
 	weapon
+		"hardpoint sprite" "hardpoint/octyl turret
 		sprite "projectile/octyl bullet"
 		sound "explosion tiny"
 		"hit effect" "explosion tiny"
-		"hardpoint sprite" "hardpoint/octyl turret
 		ammo "Octyl Kinetic Shell"
 		icon "icon/gat"
 		"turret turn" 4
@@ -117,10 +164,10 @@ outfit "Octyl Spurner Turret"
 		"reload" 12
 		"firing energy" 12
 		"firing heat" 18
-		"firing force" 25
+		"firing force" 20
 		"shield damage" 180
 		"hull damage" 240
-		"hit force" 25
+		"hit force" 60
 	description "This ancient turret mounts two of the Repulsor Cannon on a robust rotating turret. The shots have a little more kick to them than a singular Repulsor on its own."
 
 outfit "Octyl Deteriorator Turret"
@@ -147,10 +194,10 @@ outfit "Octyl Deteriorator Turret"
 		"reload" 60
 		"firing energy" 12
 		"firing heat" 18
-		"firing force" 50
+		"firing force" 40
 		"shield damage" 1000
 		"hull damage" 1500
-		"hit force" 50
+		"hit force" 120
 	description
 
 outfit "Octyl Kinetic Cache"
@@ -176,56 +223,126 @@ outfit "Octyl Kinetic Storage"
 outfit "Octyl Kinetic Shell"
 	category "Ammunition
 	cost 14
-	thumbnail "outfit/octyl bullet small"
+	thumbnail "outfit/octyl bullet"
 	"mass" .02
 	"octyl shell capacity" -1
 	description "Because the Octyl are so limited in energy, they have found physical-projectile weapons to be more effective and efficient than energy-based weapons like the Energy Blaster."
 
 
 
-outfit "Octyl Electromagnetic Detonator"
+outfit "Octyl Shield Detonator"
 	category "Secondary Weapons"
 	cost 60000
-	thumbnail "outfit/octyl missile"
-	"mass" 10
+	thumbnail "outfit/octyl missile launcher"
+	"mass" 17.5
 	"outfit space" -25
 	"weapon capacity" -25
 	"gun ports" -1
-	"octyl charge capacity" 60
+	"octyl charge capacity" 30
 	weapon
-		sprite "projectile/octyl bullet"
+		sprite "projectile/octyl missile"
+			"frame rate" 0
 		sound "octyl shoot"
-		"ammo" "Octyl Electromagnetic Charge"
+		"hit effect" "small explosion"
+		"ammo" "Octyl Shield Charge"
 		"icon" "icon/nuke"
-		"hit effect" "nuke explosion"
-		"die effect" "missile death"
+		"submunition" "octyl charge opening"
 		"inaccuracy" 1
-		"velocity" 5
+		"velocity" 8
 		"lifetime" 600
-		"reload" 180
-		"firing energy" 10
-		"firing heat" 60
-		"acceleration" .5
-		"drag" .025
-		"turn" 2
+		"reload" 30
+		"firing energy" 250
+		"firing heat" 100
+		"acceleration" .2
+		"drag" .02
+		"turn" 2.2
 		"homing" 4
-		"tracking" 1
-		"trigger radius" 100
-		"blast radius" 200
-		"shield damage" 500
-		"hull damage" 200
-		"ion damage" 10
-		"hit force" 150
-		"missile strength" 20
+		"optical tracking" .8
+		"radar tracking" .4
+		"split range" 250
+		"shield damage" -240
+		"hull damage" -10
+		"ion damage" -7
+		"hit force" -10
+		"missile strength" 42
 	description
 
-outfit "Octyl Electromagnetic Charge"
+outfit "octyl charge opening"
+	weapon
+		sprite "projectile/octyl missile"
+			"frame rate" 20
+			"no repeat"
+		"hit effect" "small explosion"
+		"submunition" "octyl charge open"
+		"lifetime" 9
+		"shield damage" -500
+		"hull damage" -50
+		"ion damage" -20
+		"hit force" -60
+		"missile strength" 36
+
+outfit "octyl charge open"
+	weapon
+		sprite "projectile/octyl missile"
+			"start frame" 3
+			"frame rate" 20
+			"no repeat"
+		"hit effect" 
+		"hit effect" "nuke explosion"
+		"die effect" "nuke explosion"
+		"lifetime" 12
+		"blast radius" 200
+		"shield damage" 1000
+		"hull damage" 100
+		"ion damage" 30
+		"hit force" 80
+		"missile strength" 12
+
+outfit "Octyl Shield Charge"
 	category "Ammunition"
 	cost 800
 	thumbnail "outfit/octyl missile"
 	"mass" .25
 	"octyl charge capacity" -1
 	description
+
+
+
+outfit "Octyl Awakening Shield"
+	category "Systems"
+	cost 75000
+	thumbnail "outfit/octyl shield small"
+	"mass" 9
+	"outfit space" -9
+	"shields" 220
+	"shield generation" .2
+	"shield energy" .6
+	"shield heat" .4
+	description "This prototype shield system produces a modest shield matrix which encases many new-age Octyl ships, and has the capability of regenerating such a matrix should trauma cause it to dispel. This concept has already been captured by most other races, though only the Octyl have such a device to increase one's native shield matrix."
+
+outfit "Octyl Cultivation Shield"
+	category "Systems"
+	cost 340000
+	thumbnail "outfit/octyl shield medium"
+	"mass" 28
+	"outfit space" -28
+	"shields" 310
+	"shield generation" 1.7
+	"shield energy" 5.1
+	"shield heat" 3.4
+	description "New-age Octyl technology is somewhat more powerful than human equipment you're familiar with, but is very energy-inefficient, banking on the efficiency of their solar panels to keep them afloat."
+
+outfit "Octyl Enlightenment Shield"
+	category "Systems"
+	cost 1980000
+	thumbnail "outfit/octyl shield large"
+	"mass" 84
+	"outfit space" -84
+	"shields" 1160
+	"shield generation" 6.7
+	"shield energy" 20.1
+	"shield heat" 13.4
+	description "This shielding system is crude and inefficient, though it does one thing that human shielding systems can't do. Alongside an alarming amount of energy for an above-average shield regeneration, this system increases the native shield capacity of your ship."
 
 
 
@@ -236,7 +353,7 @@ outfit "Octyl Luminance Collector"
 	"mass" 2
 	"outfit space" -2
 	"solar collection" .2
-	"heat generation" .012
+	"heat generation" .013
 	description "This compact solar panel is the lifeblood of the Octyl. It is powerful enough that a small array can fuel many of the Octyl's energy requirements."
 
 outfit "Octyl Luminance Innervator"
@@ -245,19 +362,19 @@ outfit "Octyl Luminance Innervator"
 	thumbnail "outfit/octyl solar medium"
 	"mass" 18
 	"outfit space" -18
-	"solar collection" 2.5
-	"heat generation" .2
-	description "This large array of panels and pivots takes the static Octyl Luminance Collector, and makes it many times more efficient with tracking capabilities and a larger collecting area. On the other side, the machinery used to increase its efficiency creates a small bit of waste heat."
+	"solar collection" 2.9
+	"heat generation" .17
+	description "This large array of panels and pivots takes the static Octyl Luminance Collector, and makes it many times more efficient with tracking capabilities and a larger collecting area. On the other side, the machinery used to increase its efficiency creates a small amount of waste heat."
 
-outfit "Octyl Millennium Luminance"
+outfit "Octyl Luminance Synchronizer"
 	category "Power"
 	cost 1500000
 	thumbnail "outfit/octyl solar large"
 	"mass" 109
 	"outfit space" -109
-	"solar collection" 40
-	"heat generation" 7.36
-	description "This massive array of mirrors and solar collectors meant to be deployed over several hundred acres is partially what powers the monstrous Octyl ship-worlds."
+	"solar collection" 19.8
+	"heat generation" 2.8
+	description "This massive array of mirrors and solar collectors, meant to be deployed over several hundred acres, is partially what powers the monstrous Octyl ship-worlds."
 
 
 
@@ -302,7 +419,7 @@ outfit "Octyl Beam Geothermal"
 	"geothermal capacity" -1
 	"energy generation" 1.1
 	"cooling" .6
-	description "This simple geothermal generator turns a planetoid's latent inner heat into useable energy, whilst cooling the outfit-bearing, outer shell somewhat."
+	description "This simple geothermal generator turns a planetoid's latent inner heat into useable energy, whilst cooling the outfit-bearing, outer shell to some degree."
 
 outfit "Octyl Flash Geothermal"
 	category "Power"
@@ -324,7 +441,7 @@ outfit "Octyl Ray Geothermal"
 	"geothermal capacity" -3
 	"energy generation" 9.9
 	"cooling" 9.6
-	description "Octyl technology is strikingly efficient, and this geothermal tower, while massive, is much more efficient than the next step down, which is itself twice as efficient as the step after it. This comes at a cost, as this tower is five-and-a-half times larger than the next step down."
+	description "old-age Octyl technology is strikingly efficient, and this geothermal tower, while massive, is much more efficient than the next step down, which is itself twice as efficient as the step after it. This comes at a cost, as this tower is five-and-a-half times larger than the next step down."
 
 
 
@@ -338,17 +455,17 @@ outfit "Octyl Dribble Battery"
 	cooling 2.1
 	description "This is a pair of ten-ton metal towers that dig into a pocket of water, saturate it with salts, and transform it into one giant battery. It's not as efficient as a totally artificial battery, but it's very resourceful. Disregarding the prerequisite for a liquid body, it's frighteningly efficient."
 
-outfit "Octyl Splash Battery"
+outfit "Octyl Drop Battery"
 	category "Power"
 	cost 360000
 	thumbnail "outfit/unknown"
 	mass 80
 	"outfit space" -80
-	"energy capacity" 280000
+	"energy capacity" 28000
 	cooling 9.3
 	description "These heavy metal rods are inserted into a body of water, with a barrier between two halves, which creates one massive battery. Addition of electrolytic salts and other compounds enhance the battery's capacity greatly, and a side effect of this method is a noticeable cooling effect across the entire pool of water."
 
-outfit "Octyl Oceanic Capacitor"
+outfit "Octyl Drum Battery"
 	category "Power"
 	cost 3750000
 	thumbnail "outfit/unknown"
@@ -396,6 +513,18 @@ outfit "Octyl Patternbreaker"
 
 
 
+outfit "Octyl Venom Gun"
+	category "Hand to Hand"
+	cost 130000
+	thumbnail "outfit/octyl syringe gun"
+	"capture attack" 1.5
+	"capture defense" 4.8
+	"unplunderable" 1
+	description "This syringe gun contains the potent venom of the Octyl, enough to paralyze a grown man for several hours, and kill small children. It is not a very effective offensive weapon, however, and serves best as a defensive measure."
+	description "Even a small drop of the venom is capable of fueling this weapon for thousands of uses. However, restocking is a difficult process, involving extracting the substance from its natural environment, or purchasing it from a willing subject."
+
+
+
 outfit "Octyl Chill Motor"
 	category "Engines"
 	cost 170000
@@ -406,10 +535,13 @@ outfit "Octyl Chill Motor"
 	"thrust" 9
 	"thrusting energy" 0.675
 	"thrusting heat" 1.55
+	"flare sprite" "effect/ion flare/tiny"
+		"frame rate" 1.2
+	"flare sound" "ion tiny"
 	"turn" 650
 	"turning energy" 0.64
 	"turning heat" 1.44
-	description "This is a unique thrusting system, which combines turning and thrusting into one set of engines, the nature of such a combination making the functions essentially inseparable
+	description "This is a unique thrusting system, which combines turning and thrusting into one set of engines, the nature of such a combination making the functions essentially inseparable."
 
 outfit "Octyl Cold Motor"
 	category "Engines"
@@ -421,6 +553,9 @@ outfit "Octyl Cold Motor"
 	"thrust" 17
 	"thrusting energy" 1.25
 	"thrusting heat" 2.86
+	"flare sprite" "effect/ion flare/medium"
+		"frame rate" 1.0
+	"flare sound" "ion medium"
 	"turn" 1242
 	"turning energy" 1.21
 	"turning heat" 2.7
@@ -435,6 +570,9 @@ outfit "Octyl Froze Motor"
 	"thrust" 44
 	"thrusting energy" 2.66
 	"thrusting heat" 6
+	"flare sprite" "effect/ion flare/large"
+		"frame rate" 0.9
+	"flare sound" "ion large"
 	"turn" 2808
 	"turning energy" 2.68
 	"turning heat" 5.96
@@ -449,6 +587,9 @@ outfit "Octyl Generation Motor"
 	"thrust" 330
 	"thrusting energy" 13.2
 	"thrusting heat" 29
+	"flare sprite" "effect/ion flare/huge"
+		"frame rate" 5
+	"flare sound" "ion huge"
 	"turn" 16900
 	"turning energy" 15.2
 	"turning heat" 33.4
