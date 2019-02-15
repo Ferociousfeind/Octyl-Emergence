@@ -4,7 +4,13 @@ mission "Octyl in Coalition space [0]"
 	landing
 	to offer
 		has "Coalition: Contributor: done"
-		random < 10
+		random < 5
+		random < 5
+	source
+		not
+			government Coalition
+		not
+			government Heliarch
 	destination "Ring of Friendship"
 	on offer
 		conversation
@@ -76,6 +82,15 @@ mission "Octyl in Coalition space [0]"
 			`	"If to assist us you wish not, leave you may." says the Arachi, "But if to assist us you wish, meet us the Heliarch again in the spaceport."`
 
 
+
+
+
+
+
+
+
+
+
 mission "Octyl in Coalition space [1]"
 	name "Converge with Heliarch defense"
 	description "With a fleet of Heliarch vessels, converge with the rest of the Heliarch's preparatory defensive fleets on the <destination>."
@@ -96,7 +111,7 @@ mission "Octyl in Coalition space [1]"
 		conversation
 			`You spend some time idling near the docking bays of the Ring of Friendship, waiting for Heliarch agents to instruct you further. While waiting, you notice the activity on the ring world had picked up considerably. Double, perhaps triple the activity you're used to seeing.`
 			`	On top of the increased activity, the atmosphere seems more tense than usual. Groups of Heliarch agents rushing to and from ships, tending to the ringworld, preparing their warships. Wide-eyed, you watch a large group of Heliarchs ferry shipments of Quarg equipment, and install them onto veteran-looking Punishers.`
-			`	After watching the first Skylance being installed, a triplet of the Heliarch approach you. "Captain <last>, you are?" asks the Saryd, "Weapons, you hold? Assistance, we may need."`
+			`	After watching the first Skylance being installed, a triplet of the Heliarch approach you. "Captain <last>, you are?" asks the Saryd, "Weapons, you have? Assistance, we may need."`
 			choice
 				`	"Yes, I have weapons."`
 				`	"No, I am here to talk to the aliens."`
@@ -130,23 +145,27 @@ mission "Octyl in Coalition space [1]"
 			label logistics
 			`	"So much power, the Quarg Skylances use," pipes in an Arachi, "Batteries, we must rely on. Enough power, our reactors cannot provide. But in bursts, if we fire, just as strong the weapons remain."`
 			`	"Please," says a Saryd, "To the visitors, follow us if you wish."`
-			`	"Gather strength, we will," clarifies a Kimek, "Unite our forces we will, on the Ring of Power.`
-							accept
+			`	"Gather strength, we will," clarifies a Kimek, "Unite our forces we will, on the Ring of Power."`
+				accept
 	on complete
-		payment 50000
-		conversation 
-			`As you guide the fleet of Heliarch warships to one of many docking bays across the surface of the Ring of Power, you watch the .`
-			`	Then, you turn around and see many, many more pouring in from the skies. You try to keep track, but you lose count some time after the fifth Neutralizer flies in for landing. After several minutes of waiting for the fuss of the local population to calm down, a trio of Heliarch agents confront you.`
+		conversation
+			`As you guide the fleet of warships to a modest hangar on the Ring of Power, you watch swarms of Heliarch agents pour in to inspect the vessels. It seems bringing their defense fleets into action was a lot more difficult and nerve-wracking than much of the Heliarch had anticipated.`
+			`	Then, you turn around and see many, many more pouring in from the skies. You try to keep track, but you lose count some time after the fifth Punisher flies in for landing. After several minutes of waiting through standard safety procedures, a trio of Heliarch agents confront you.`
 			`	"To Lone Cloud, we have pinpointed our visitors," explains the Saryd, "To Lone Cloud, we shall fly. A fight, you should expect, <last>."`
 			`	"What they may do, we know not," says the Kimek.`
 			`	"If the Coalition will ultimately survive, we know not," spouts the Arachi.`
 			choice
-				`	"We will survive whatever has arrived from the great beyond."`
+				`	"We will survive whatever has arrived in your space from the great beyond."`
 				`	"If we talk to them, whatever they are, maybe we don't have to fight."`
 				`	"Maybe your Skylances are enough to scare them away."`
 			`	"Maybe," says the Saryd solemnly, "All we can do is hope."`
 			`	"Meet we the Heliarch back in the spaceport," says the Kimek, "when you are ready."`
-			`	Before the three move on, the Arach walks up to you and places something in your hand, "For you, from the Heliarch, <last>. Thank you for appearing on our the Heliarch's request." The credit chip in your hands is worth <payment>.`
+
+
+
+
+
+
 
 
 
@@ -162,26 +181,32 @@ mission "Octyl in Coalition space [2]"
 		personality heroic disables escort
 			confusion 5
 		ship "Heliarch Punisher (Skylance)" "Vigilant Shield"
+
 		ship "Heliarch Interdictor (Skylance)" "Tenacious Agent"
 		ship "Heliarch Interdictor (Skylance)" "Cautious Guard"
+		ship "Heliarch Interdictor" "Adamant Defender"
+
 		ship "Heliarch Neutralizer" "Unwavering Manager"
 		ship "Heliarch Neutralizer" "Pragmatic Director"
 		ship "Heliarch Neutralizer" "Unbending Seeker"
 		ship "Heliarch Neutralizer" "Attentive Governor"
+		ship "Heliarch Neutralizer" "Relentless Guardian"
+		ship "Heliarch Neutralizer" "Unyielding Shield"
 
 	npc kill
 		system "Lone Cloud"
 		government Octyl
 		personality waiting staying heroic mute
 			confusion 25
-		ship "Octyl Physalia" "Esbinyar Enmaboryi Am"
-		ship "Octyl Physalia" "Boliyu Hememou Zmni"
+		ship "Octyl Nautilus (mission)" "Esbinyar Enmaboryi Am"
+		ship "Octyl Nautilus (mission)" "Ecelmna Anivyu Benli"
+		ship "Octyl Nautilus (mission)" "Ghewap Nmyayk Theo"
 		dialog
 			`The last of the fleet of "Octyl" ships has been destroyed. You have been instructed to land on Vibrant Water to reconvene.`
 	on offer
 		conversation
-			`You signal to a Heliarch agent that you're ready to go. They smile, nod, and shout something to the rest of the group of Heliarch agents awaiting your readiness. With your little hand signal, dozens of antigravity engines roar to life, and you watch dozens of Heliarch ships slowly rise into the air.`
-			`	You board your own vessel and signal one of the warships.`
+			`You signal to a Heliarch agent that you're ready to go. They smile, nod, and shout something to the rest of the group of Heliarch agents awaiting your readiness. With your little hand signal, dozens of antigravity engines roar to life, and you watch dozens of Heliarch ships slowly float away from the ringworld.`
+			`	You board your own vessel and hail one of the warships.`
 			choice
 				`	"Are we all ready to go?"`
 				`	"What have you gathered about these aliens?"`
@@ -215,10 +240,31 @@ mission "Octyl in Coalition space [2]"
 				launch
 	on enter "Lone Cloud"
 		dialog
-			`Upon jumping into the system, your scanners immediately pick up five giant ships in the system. Their communication systems appear to be malfunctioning, as they aren't responding to your hails.`
+			`Upon jumping into the system, your scanners immediately pick up three giant ships in the system. Their communication systems appear to be malfunctioning, as they aren't responding to your hails.`
+	on visit
+		dialog
+			`It might be a good idea to help the Heliarch with the battle overhead, instead of waiting it out on the planet.`
 	on complete
-		payment 250000
+		payment 500000
 		conversation
 			`[unfinished]`
 			`	[say something about one more ship on the scanners]`
 			`	[put a timer for two months before the next mission]`
+		event "octyl physalia arrives" 40 100
+
+event "octyl physalia arrives"
+
+mission "Octyl in Coalition space [3]"
+	name "Octyl in Coalition space"
+	description "Investigate the new Octyl ship that has arrived in Coalition space."
+	to offer
+		has "event: octyl physalia arrives"
+		not
+			or
+				government Coalition
+				government Heliarch
+	destination "Ring of Friendship"
+	on offer
+		conversation
+			`[the player is called back to coalition space because the octyl ship has arrived]`
+			`	[tell the player to get to the ring of friendship again]`
