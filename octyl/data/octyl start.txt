@@ -181,11 +181,9 @@ mission "Octyl in Coalition space [2]"
 		personality heroic disables escort
 			confusion 5
 		ship "Heliarch Punisher (Skylance)" "Vigilant Shield"
-
 		ship "Heliarch Interdictor (Skylance)" "Tenacious Agent"
 		ship "Heliarch Interdictor (Skylance)" "Cautious Guard"
 		ship "Heliarch Interdictor" "Adamant Defender"
-
 		ship "Heliarch Neutralizer" "Unwavering Manager"
 		ship "Heliarch Neutralizer" "Pragmatic Director"
 		ship "Heliarch Neutralizer" "Unbending Seeker"
