@@ -4,8 +4,8 @@ mission "Octyl in Coalition space [0]"
 	landing
 	to offer
 		has "Coalition: Contributor: done"
-		random < 5
-		random < 5
+		random < 1
+		random < 25
 	source
 		not
 			government Coalition
@@ -83,14 +83,6 @@ mission "Octyl in Coalition space [0]"
 
 
 
-
-
-
-
-
-
-
-
 mission "Octyl in Coalition space [1]"
 	name "Converge with Heliarch defense"
 	description "With a fleet of Heliarch vessels, converge with the rest of the Heliarch's preparatory defensive fleets on the <destination>."
@@ -163,12 +155,6 @@ mission "Octyl in Coalition space [1]"
 
 
 
-
-
-
-
-
-
 mission "Octyl in Coalition space [2]"
 	name "Confront foreign visitors in Coalition space"
 	description "With the Heliarch's defensive fleet, confront whoever has appeared in the Lone Cloud system."
@@ -234,7 +220,7 @@ mission "Octyl in Coalition space [2]"
 			`	"Which ship we may talk to we still do not know," warns the Kimek.`
 			`	"If we can even communicate we do not know," mutters the Arachi, before leaving the holographic display's range.`
 			label end
-			`	Without another word, the ships begin to rise faster, and you break atmosphere. There is no telling what could have arrived in Coalition space beyond that hyperspace link...`
+			`	Without another word, the ships begin to rise faster, and you break atmosphere. There is no telling what could have arrived in Coalition space from the great beyond...`
 				launch
 	on enter "Lone Cloud"
 		dialog
@@ -245,11 +231,62 @@ mission "Octyl in Coalition space [2]"
 	on complete
 		payment 500000
 		conversation
-			`[unfinished]`
+			`You and the remaining Heliarch ships zero in on a particularly large and conveniently flat iceberg to land on, instead of moving out of your way to find the more common spaceport. The iceberg rocks with each ship's landing, and sinks a concerning amount into the tropical waters around you.`
+			`	The crew of the ships convene near the center of the iceberg, discussing various topics to maintain morale. It doesn't take long for an Arach to approach you and begin conversation. They explain how these icebergs house unique biospheres unlike anything found across Coalition space, due to its unique situation. "Temporary, the entire system is. Melt and become one with the oceans, this iceberg will soon, as before countless others have." The quirky nature of Heliarch translators makes the scientist very difficult to follow.`
+			choice
+				`	(Continue listening to the scientist)`
+					goto xenobiology
+				`	"Sorry, I'm just here to fend off the invaders."`
+			`	The Arach looks somewhat disheartened, before returning to their study of the surrounding organisms.`
+				goto next
+			label xenobiology
+			`	You spend some time with the Arach scientist as they explain as best they can the niches of the organisms around you. They explain ways to discern a predatory, herbivorous, and parasitic organisms apart, how to identify likely edible substances, and what classification systems the Coalition use to categorize organisms across their section of the galaxy. Unfortunately, the translator inhibits your understanding of the subject for some time, though the Arach doesn't seem to mind explaining concepts to you in simpler terms.`
+			`	Out of seemingly nowhere, the Arach looks up at you and stutters, (though the translator seems indifferent to the tonal change,) "Sorry, I am. Introductions I have neglected." They shuffle around for a moment before continuing slowly, "Mutug I am known. Have a name, do you?`
+			`	"<first> <last>," you reply, "Nice to meet you, Mutug."`
+			`	"Same to you, <first>! A pleasure it was with you to speak with." With the introductions now out of the way, the Arach launches back into an explanation. By the time they feel satisfied with your knowledge of the surrounding biosphere, Vibrant Water's sun is nearly setting.`
+			`	A small group of Heliarch agents approach you to join the Arach.`
+				goto octyl
+			label next
+			`	After spending more time on the iceberg, socializing with various Heliarch agents, you notice that Vibrant Water's sun is beginning to set. The same Arach scientist from before approaches you with a small group of shaken-looking agents, and look like they have something they need to tell you.`
+			choice
+				`	(Hear what they have to say.)`
+				`	"I'm sorry, I'm not interested in more xenobiology."`
+			label octyl
+			`	"<first>, important to you, this is," says a Saryd.`
+			`	"While fighting the Octyl ships, intruders we were accosted by," explains a Kimek.`
+			`	"Little pods carrying a number of aggressive creatures, into our hull they drilled," the Arach describes, "venomous, they were. Many of our people they poisoned and killed. But what is interesting is not that. Frail and malnourished, they seemed. Hostage Heliarch agents, they captured and consumed, as well. With our superior numbers the creatures we fought off, but our entire crew they nearly wiped out even with clear disadvantages."`
+			choice
+				`	"Do you think these creatures killed the original crew of the ships, why they didn't respond to our hails?"`
+					goto pest
+				`	"Do you know if they were only after food?"`
+					goto food
+				`	"Did you capture a few for study?"`
+					goto study
+				`	[some other question]`
+			`	[answer to last question]`
+			choice
+				`	[pest question]`
+					goto pest
+				`	[food question]`
+			label food
+			`	[answer to food question]`
+			choice
+				`	[pest question]`
+				`	[study question]`
+					goto study
+			label pest
+			`	[answer pest question]`
+			`	[beckon player along to see something]`
+			label study
+			`	[bring player to see octyl specimen]`
+			`	[indirectly answer other questions]`
+			`	[octyl specimen BREAKS OUT OF CONTAINMENT OH NO]`
+			`	[insert somewhat-complex interaction with the thing here]`
+			`	[survive the octyl, it runs away into the sea never to be seen again]`
+			`	[different scientist approaches player]`
 			`	[say something about one more ship on the scanners]`
 			`	[put a timer for two months before the next mission]`
 		event "octyl physalia arrives" 40 100
-
 event "octyl physalia arrives"
 
 mission "Octyl in Coalition space [3]"
@@ -261,6 +298,7 @@ mission "Octyl in Coalition space [3]"
 			or
 				government Coalition
 				government Heliarch
+		random < 30
 	destination "Ring of Friendship"
 	on offer
 		conversation
