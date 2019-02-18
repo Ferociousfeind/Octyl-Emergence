@@ -252,13 +252,13 @@ outfit "Octyl Stellar Scanner"
 			"frame rate" .6
 		"hardpoint sprite" "hardpoint/octyl scanner"
 		sound "octyl grapple beam"
-		"inaccuracy" .4
+		"inaccuracy" .2
 		"turret turn" 1.2
 		"velocity" 400
 		"lifetime" 1
 		"reload" 1
-		"firing energy" .16
-		"firing heat" .46
+		"firing energy" .63
+		"firing heat" 1.6
 		"shield damage" 3.1
 		"hull damage" 1.9
 		"heat damage" 1.1
@@ -274,7 +274,7 @@ outfit "Octyl Shield Detonator"
 	"outfit space" -25
 	"weapon capacity" -25
 	"gun ports" -1
-	"octyl charge capacity" 30
+	"octyl charge capacity" 60
 	weapon
 		sprite "projectile/octyl missile"
 			"frame rate" 0
@@ -284,13 +284,13 @@ outfit "Octyl Shield Detonator"
 		"icon" "icon/nuke"
 		"submunition" "octyl charge opening"
 		"inaccuracy" 1
-		"velocity" 8
+		"velocity" 5
 		"lifetime" 600
 		"reload" 30
 		"firing energy" 250
 		"firing heat" 100
-		"acceleration" .2
-		"drag" .02
+		"acceleration" .6
+		"drag" .09
 		"turn" 2.2
 		"homing" 4
 		"optical tracking" .8
@@ -338,6 +338,6 @@ outfit "Octyl Shield Charge"
 	category "Ammunition"
 	cost 800
 	thumbnail "outfit/octyl missile"
-	"mass" .25
+	"mass" .125
 	"octyl charge capacity" -1
 	description
