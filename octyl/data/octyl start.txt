@@ -347,8 +347,27 @@ mission "Octyl in Coalition space [5A]" #don't board, report back to the ring
 	destination "Ring of Friendship"
 	to offer
 		has "Octyl in Coalition space [4]: done"
+	to fail
+		has "Octyl in Coalition space [5B]: done"
+	on complete
+		conversation
+			`[you took the safer route and didn't explore the planetoid]`
 
 
 
 mission "Octyl in Coalition space [5B]" #board, meet the Octyl in-person
 	name "Explore the <npc> more closely"
+	description
+	destination "Ring of Friendship"
+	to offer
+		has "Octyl in Coalition space [4]: done"
+	to fail
+		has "Octyl in Coalition space [5A]: done"
+	npc board
+		government Octyl
+		personality derelict
+		system "3 Spring Rising"
+		ship "Octyl Physalia (mission)" "Nmygherid"
+	on complete
+		conversation
+			`[does this conversation happen right when you board the ship?]`
