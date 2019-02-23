@@ -121,7 +121,7 @@ outfit "Octyl Flash Geothermal"
 	"geothermal capacity" -2
 	"energy generation" 4.4
 	"cooling" 2.4
-	description "This tower, once plugged into a planetoid's molten core, outputs a decent amount of power for its size, and twice the amount of energy per useable mantle space underneath as the Octyl Beam Geothermal, at the cost of quite some energy per ton."
+	description "This tower, once plugged into a planetoid's molten core, outputs a decent amount of power for its size, and twice the amount of energy per useable mantle space underneath as the Octyl Beam Geothermal, at the cost of quite some tonnage."
 
 outfit "Octyl Ray Geothermal"
 	category "Power"
@@ -132,14 +132,14 @@ outfit "Octyl Ray Geothermal"
 	"geothermal capacity" -3
 	"energy generation" 9.9
 	"cooling" 9.6
-	description "old-age Octyl technology is strikingly efficient, and this geothermal tower, while massive, is much more efficient than the next step down, which is itself twice as efficient as the step after it. This comes at a cost, as this tower is five-and-a-half times larger than the next step down."
+	description "Old-age Octyl technology is strikingly efficient, and this geothermal tower, while massive, is unparalleled in energy output for what it consumes."
 
 
 
 outfit "Octyl Dribble Battery"
 	category "Power"
 	cost 60000
-	thumbnail "outfit/unknown"
+	thumbnail "outfit/octyl battery small"
 	mass 20
 	"outfit space" -20
 	"energy capacity" 6200
@@ -149,7 +149,7 @@ outfit "Octyl Dribble Battery"
 outfit "Octyl Drop Battery"
 	category "Power"
 	cost 360000
-	thumbnail "outfit/unknown"
+	thumbnail "outfit/octyl battery medium"
 	mass 80
 	"outfit space" -80
 	"energy capacity" 28000
@@ -159,7 +159,7 @@ outfit "Octyl Drop Battery"
 outfit "Octyl Drum Battery"
 	category "Power"
 	cost 3750000
-	thumbnail "outfit/unknown"
+	thumbnail "outfit/octyl battery large"
 	mass 500
 	"outfit space" -500
 	"energy capacity" 300000
@@ -223,13 +223,13 @@ outfit "Octyl Chill Motor"
 	"mass" 50
 	"outfit space" -50
 	"engine capacity" -50
-	"thrust" 9
+	"thrust" 13.7
 	"thrusting energy" 0.675
 	"thrusting heat" 1.55
 	"flare sprite" "effect/ion flare/tiny"
 		"frame rate" 1.2
 	"flare sound" "ion tiny"
-	"turn" 650
+	"turn" 480
 	"turning energy" 0.64
 	"turning heat" 1.44
 	description "This is a unique thrusting system, which combines turning and thrusting into one set of engines, the nature of such a combination making the functions essentially inseparable."
@@ -241,13 +241,13 @@ outfit "Octyl Cold Motor"
 	"mass" 90
 	"outfit space" -90
 	"engine capacity" -90
-	"thrust" 17
+	"thrust" 26.6
 	"thrusting energy" 1.25
 	"thrusting heat" 2.86
 	"flare sprite" "effect/ion flare/medium"
 		"frame rate" 1.0
 	"flare sound" "ion medium"
-	"turn" 1242
+	"turn" 960
 	"turning energy" 1.21
 	"turning heat" 2.7
 
@@ -258,13 +258,13 @@ outfit "Octyl Froze Motor"
 	"mass" 180
 	"outfit space" -180
 	"engine capacity" -180
-	"thrust" 44
+	"thrust" 61.3
 	"thrusting energy" 2.66
 	"thrusting heat" 6
 	"flare sprite" "effect/ion flare/large"
 		"frame rate" 0.9
 	"flare sound" "ion large"
-	"turn" 2808
+	"turn" 2400
 	"turning energy" 2.68
 	"turning heat" 5.96
 
@@ -285,3 +285,5 @@ outfit "Octyl Generation Motor"
 	"turning energy" 15.2
 	"turning heat" 33.4
 	description "This engine collection is the size of many large fields, meant to steer and move a small planetoid. They are loosely held in place partly by foundations, gravity, and its own propulsion. It is larger than some of the largest ships other races have to offer."
+
+(-0.67861, 0.88302, 0.93969)

@@ -291,7 +291,9 @@ event "octyl physalia arrives"
 
 mission "Octyl in Coalition space [3]"
 	name "Octyl in Coalition space"
-	description "Investigate the new Octyl ship that has arrived in Coalition space."
+	description "Report to the Heliarch, and see what they want to do about the Octyl."
+	deadline 7 3.5
+	landing
 	to offer
 		has "event: octyl physalia arrives"
 		not
@@ -304,3 +306,49 @@ mission "Octyl in Coalition space [3]"
 		conversation
 			`[the player is called back to coalition space because the octyl ship has arrived]`
 			`	[tell the player to get to the ring of friendship again]`
+			`	[TIME SENSITIVE MISSION!]`
+				accept
+
+mission "Octyl in Coalition space [4]"
+	name "Octyl in Coalition space"
+	description "Bring <fare> and <cargo> to the Octyl planetoid."
+	blocked "You have arrived on <origin>, but you do not have enough space to service the Heliarch! Return when you have enough space for <tons> of cargo capacity and <fare> available."
+	cargo "scanning equipment" 30
+	passengers 12
+	landing
+	source "Ring of Friendship"
+	destination "Fourth Shadow"
+	on offer
+		payment 80000
+		conversation
+			`[heliarch loads cargo and passengers aboard]`
+			`	[forward payment of <payment> for coming back on such short notice]`
+	npc disable
+		government Octyl
+		personality heroic opportunistic staying waiting target mute
+			confusion 0
+		system "3 Spring Rising"
+		ship "Octyl Physalia (mission)" "Nmygherid"
+		dialog "After blasting at the surface of the planetoid, you must've severed an important something, as activity has all but ceased. A heliarch scientist suggests landing on the planetoid to get more accurate information, but warns it may be dangerous."
+	on complete
+		conversation
+			`[land on the slum planet]`
+			`	[talk about it being slum and whatnot. Some people seem averse to you and the heliarch]`
+			`	[talk more about boarding/exploring the planetoid]`
+			`	[attract attention of a few coalition "extremists"]`
+			`	[heliarch agents tell you not to worry about it, and take care of the issue]`
+
+
+
+
+mission "Octyl in Coalition space [5A]" #don't board, report back to the ring
+	name "Report back to the <destination>
+	description
+	destination "Ring of Friendship"
+	to offer
+		has "Octyl in Coalition space [4]: done"
+
+
+
+mission "Octyl in Coalition space [5B]" #board, meet the Octyl in-person
+	name "Explore the <npc> more closely"

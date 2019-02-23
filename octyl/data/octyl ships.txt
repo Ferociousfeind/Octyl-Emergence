@@ -156,12 +156,12 @@ ship "Octyl Moschata"
 	sprite "ship/moschata"
 	attributes
 		category "Medium Warship"
-		cost 22000000
-		shields 2800
-		hull 19000
-		"required crew" 23
-		bunks 37
-		mass 290
+		cost 36000000
+		shields 3300
+		hull 32000
+		"required crew" 31
+		bunks 46
+		mass 310
 		drag 3.1
 		"heat dissipation" .6
 		"fuel capacity" 400
@@ -189,7 +189,7 @@ ship "Octyl Nautilus"
 	sprite "ship/nautilus"
 	attributes
 		category "Transport"
-		cost 160000000
+		cost 280000000
 		shields 0
 		hull 115000
 		"required crew" 150
@@ -376,3 +376,28 @@ ship "Octyl Physalia"
 	explode "huge explosion" 4
 	"final explode" "final explosion huge"
 	description ...
+
+ship "Octyl Physalia" "Octyl Physalia (mission)"
+	outfit
+		"Octyl Stellar Scanner" 5
+		"Octyl Deteriorator Turret" 5
+		"Octyl Kinetic Storage" 4
+		"Octyl Kinetic Shell" 5846
+		"Octyl Venom Gun" 12500
+
+		"Octyl Beam Geothermal" 4
+		"Octyl Flash Geothermal" 4
+		"Octyl Luminance Synchronizer"
+		"Octyl Drum Battery" 3
+
+		"Octyl Generation Motor"
+	turret 0 -275 "Octyl Stellar Scanner"
+	turret 163 -224 "Octyl Deteriorator Turret"
+	turret -163 -224 "Octyl Deteriorator Turret"
+	turret 261 -86 "Octyl Stellar Scanner"
+	turret -261 -86 "Octyl Stellar Scanner"
+	turret 265 88 "Octyl Deteriorator Turret"
+	turret -265 88 "Octyl Deteriorator Turret"
+	turret 164 222 "Octyl Stellar Scanner"
+	turret -164 222 "Octyl Stellar Scanner"
+	turret 0 0 "Octyl Deteriorator Turret"
