@@ -308,6 +308,8 @@ mission "Octyl in Coalition space [3]"
 			`	[tell the player to get to the ring of friendship again]`
 			`	[TIME SENSITIVE MISSION!]`
 				accept
+	on fail
+		"Octyl in Coalition space [3]: late"
 
 mission "Octyl in Coalition space [4]"
 	name "Octyl in Coalition space"
@@ -318,11 +320,23 @@ mission "Octyl in Coalition space [4]"
 	landing
 	source "Ring of Friendship"
 	destination "Fourth Shadow"
+	to offer
+		has "Octyl in Coalition space [3]: offered"
 	on offer
 		payment 80000
 		conversation
 			`[heliarch loads cargo and passengers aboard]`
+			branch late
+				has "Octyl in Coalition space [3]: late"
+			apply
+				payment 600000
 			`	[forward payment of <payment> for coming back on such short notice]`
+				accept
+			label late
+			apply
+				payment 80000
+			`	[you're LATE! Severely reduced pay and -1 trustworthiness]`
+				accept
 	npc disable
 		government Octyl
 		personality heroic opportunistic staying waiting target mute
@@ -330,6 +344,11 @@ mission "Octyl in Coalition space [4]"
 		system "3 Spring Rising"
 		ship "Octyl Physalia (mission)" "Nmygherid"
 		dialog "After blasting at the surface of the planetoid, you must've severed an important something, as activity has all but ceased. A heliarch scientist suggests landing on the planetoid to get more accurate information, but warns it may be dangerous."
+	on enter "3 Spring Rising"
+		conversation
+			`The scanners fire up and get to work on the foreign object in the system. After a few minutes of waiting, the heliarch troupe reports with disdain.`
+			`	"No response, the scanners gathered," a Saryd explains.`
+			`	A Kimek points to your bridge, "Attacking, the Octyl planetoid is. Defend your ship you must!"`
 	on complete
 		conversation
 			`[land on the slum planet]`
@@ -337,6 +356,9 @@ mission "Octyl in Coalition space [4]"
 			`	[talk more about boarding/exploring the planetoid]`
 			`	[attract attention of a few coalition "extremists"]`
 			`	[heliarch agents tell you not to worry about it, and take care of the issue]`
+			apply
+				payment 2500000
+			`	[receive pay for such daunting work]`
 
 
 
