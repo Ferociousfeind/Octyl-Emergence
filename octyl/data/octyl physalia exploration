@@ -1,0 +1,37 @@
+conversation "octyl physalia exploration"
+	`[Board the physalia with a dozen researchers. Apparently, more ships will arrive as time goes on, with more specially-trained expedition teams. Expound on what those teams usually do?]`
+	`	[Discuss how best to explore the thing, as there are winding corridoors instead of any open spaces to make mapping the landscape easy. It could barely even be described as landscape, it's obvious this has been converted to most effectively service whoever used it.]`
+	choice
+		`	[12 people in one group, do not split up, do not get lost.]`
+			goto 12
+		`	[6 people, 2 groups. Cover more ground, can still defend against whatever was using it.]`
+			goto 6
+		`	[3 people, 4 groups. Cover even more ground, faith in not getting attacked.]`
+			goto 3
+		`	[All 12 people split up to cover maximum ground.]`
+	`	[Reaction to splitting up fully. Bad idea, and cursory sonar scans reveal the structure is like a labrinth all the way through, with no rhyme or reason.]`
+	`	[Further discussion, then some strange noise which spooks much of the group. Did we mention there are no lights at all?]`
+	choice
+		`	[12 people in one group.]`
+			goto 12
+		`	[6 in a group.]`
+			goto 6
+		`	[3 in a group.]`
+			goto 3
+	label 12
+	apply
+		"recon team" = 12
+	`	[Decide on sticking together.]`
+		goto start
+	label 6
+	apply
+		"recon team" = 6
+	`	[Decide on 2 teams of 6.]`
+		goto start
+	label 3
+	apply
+		"recon team" = 3
+	`	[Decide on 4 teams of 3.]`
+		goto start
+	label start
+	`	[Something.]`
