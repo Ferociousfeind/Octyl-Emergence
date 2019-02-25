@@ -1,4 +1,4 @@
-conversation "octyl physalia exploration"
+conversation "physalia exploration"
 	`[Board the physalia with a dozen researchers. Apparently, more ships will arrive as time goes on, with more specially-trained expedition teams. Expound on what those teams usually do?]`
 	`	[Discuss how best to explore the thing, as there are winding corridoors instead of any open spaces to make mapping the landscape easy. It could barely even be described as landscape, it's obvious this has been converted to most effectively service whoever used it.]`
 	choice
