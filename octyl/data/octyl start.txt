@@ -374,6 +374,7 @@ mission "Octyl in Coalition space [5A]" #don't board, report back to the ring
 	on complete
 		conversation
 			`[you took the safer route and didn't explore the planetoid]`
+			`	[discuss what to do next in accordance to
 
 
 
@@ -391,5 +392,9 @@ mission "Octyl in Coalition space [5B]" #board, meet the Octyl in-person
 		system "3 Spring Rising"
 		ship "Octyl Physalia (mission)" "Nmygherid"
 	on complete
-		conversation
-			`[does this conversation happen right when you board the ship?]`
+		# Does this conversation happen right when you board the ship?
+		# Whatever the case, this is the BIG conversation where you explore the planet.
+		# It's a small PLANET it's easy to get lost!
+		conversation "physalia exploration"
+		# In a file of its own, I expect it to be decently huge like that.
+			
