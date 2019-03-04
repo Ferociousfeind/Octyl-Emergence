@@ -285,5 +285,3 @@ outfit "Octyl Generation Motor"
 	"turning energy" 15.2
 	"turning heat" 33.4
 	description "This engine collection is the size of many large fields, meant to steer and move a small planetoid. They are loosely held in place partly by foundations, gravity, and its own propulsion. It is larger than some of the largest ships other races have to offer."
-
-(-0.67861, 0.88302, 0.93969)
