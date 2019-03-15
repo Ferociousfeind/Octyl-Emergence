@@ -143,7 +143,7 @@ outfit "Octyl Dribble Battery"
 	mass 20
 	"outfit space" -20
 	"energy capacity" 6200
-	cooling 2.1
+	cooling 1.7
 	description "This is a pair of ten-ton metal towers that dig into a pocket of water, saturate it with salts, and transform it into one giant battery. It's not as efficient as a totally artificial battery, but it's very resourceful. Disregarding the prerequisite for a liquid body, it's frighteningly efficient."
 
 outfit "Octyl Drop Battery"
@@ -153,7 +153,7 @@ outfit "Octyl Drop Battery"
 	mass 80
 	"outfit space" -80
 	"energy capacity" 28000
-	cooling 9.3
+	cooling 7.3
 	description "These heavy metal rods are inserted into a body of water, with a barrier between two halves, which creates one massive battery. Addition of electrolytic salts and other compounds enhance the battery's capacity greatly, and a side effect of this method is a noticeable cooling effect across the entire pool of water."
 
 outfit "Octyl Drum Battery"
@@ -163,7 +163,7 @@ outfit "Octyl Drum Battery"
 	mass 500
 	"outfit space" -500
 	"energy capacity" 300000
-	cooling 100
+	cooling 50
 	description "This is no simple outfit, this is a series of metal structures which transform a planetoid's subsurface ocean into one massive battery. On top of this, the transformation excites many geysers across the planetoid's surface, which causes a profound cooling effect."
 
 
@@ -189,7 +189,7 @@ outfit "Octyl Insectoid Restructurer"
 	"hull repair rate" .15
 	"hull energy" .05
 	"hull heat" .5
-	description "These hull-walking robots greatly resemble terrestrial beetles. They are equipped with miniature propulsion systems to move from point to point across your ship quickly and efficiently, to effectively undo stress and trauma done to your outer hull. They stop functioning, unfortunately, should the damage across the vessel become too severe."
+	description "These hull-walking robots greatly resemble terrestrial beetles. They are equipped with miniature propulsion systems to move across your ship quickly and efficiently, which allows them to effectively repair damage done to your outer hull. They stop functioning, unfortunately, should the damage across your vessel become too severe."
 
 outfit "Octyl Patternbreaker"
 	category "Systems"
@@ -245,7 +245,7 @@ outfit "Octyl Cold Motor"
 	"thrusting energy" 1.25
 	"thrusting heat" 2.86
 	"flare sprite" "effect/ion flare/medium"
-		"frame rate" 1.0
+		"frame rate" 1
 	"flare sound" "ion medium"
 	"turn" 960
 	"turning energy" 1.21
@@ -262,7 +262,7 @@ outfit "Octyl Froze Motor"
 	"thrusting energy" 2.66
 	"thrusting heat" 6
 	"flare sprite" "effect/ion flare/large"
-		"frame rate" 0.9
+		"frame rate" .9
 	"flare sound" "ion large"
 	"turn" 2400
 	"turning energy" 2.68
@@ -279,7 +279,7 @@ outfit "Octyl Generation Motor"
 	"thrusting energy" 13.2
 	"thrusting heat" 29
 	"flare sprite" "effect/ion flare/huge"
-		"frame rate" 5
+		"frame rate" .8
 	"flare sound" "ion huge"
 	"turn" 16900
 	"turning energy" 15.2

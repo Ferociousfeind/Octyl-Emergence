@@ -281,14 +281,14 @@ ship "Octyl Physalia"
 	sprite "ship/physalia"
 	attributes
 		category "Transport"
-		cost 85000000000
+		cost 17000000000
 		shields 0
-		hull 1000000
+		hull 65000000
 		"required crew" 5000
 		bunks 35000
 		mass 75000
 		drag 34
-		"heat dissipation" .02
+		"heat dissipation" .05
 		"geothermal capacity" 12
 		"heat generation" 120
 		"fuel capacity" 1500
@@ -301,6 +301,24 @@ ship "Octyl Physalia"
 			"shield damage" 100000
 			"hull damage" 250000
 			"hit force" 300000
+		outfit
+			"Octyl Deteriorator Turret" 10
+			"Octyl Kinetic Shell" 13000
+			"Octyl Kinetic Storage" 7
+			"Octyl Hull Refit" 30
+			"Octyl Insectoid Restructurer" 10
+			"Octyl Patternbreaker" 5
+
+			"Octyl Beam Geothermal" 5
+			"Octyl Flash Geothermal" 2
+			"Octyl Ray Geothermal"
+			"Octyl Flame Generator"
+			"Octyl Luminance Synchronizer" 2
+			"Octyl Dribble Battery"
+			"Octyl Drop Battery" 2
+			"Octyl Drum Battery"
+
+			"Octyl Generation Motor" 3
 
 	turret 0 -275
 	turret 163 -224
