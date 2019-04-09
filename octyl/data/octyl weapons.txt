@@ -111,7 +111,7 @@ outfit "Octyl Pulsator Turret"
 		"shield damage" 56
 		"hull damage" 42
 		"hit force" 15
-	description
+	description "The Pulsator Turret is an attempt by the Octyl to make a standard energy weapon, one focused on damaging as opposed to pulling or electrifying the target. The result has a bit of kick to it, and is very energy-hungry compared to energy weapons you're used to, but it definitely gets the job done."
 
 outfit "Octyl Repulsor Cannon"
 	category "Secondary Weapons"
@@ -129,7 +129,7 @@ outfit "Octyl Repulsor Cannon"
 		ammo "Octyl Kinetic Shell"
 		icon "icon/gat"
 		"inaccuracy" 1
-		"velocity" 15
+		"velocity" 10
 		"lifetime" 60
 		"reload" 24
 		"firing energy" 12
@@ -159,7 +159,7 @@ outfit "Octyl Spurner Turret"
 		icon "icon/gat"
 		"turret turn" 4
 		"inaccuracy" 3
-		"velocity" 25
+		"velocity" 15
 		"lifetime" 45
 		"reload" 12
 		"firing energy" 12
@@ -188,9 +188,9 @@ outfit "Octyl Deteriorator Turret"
 		ammo "Octyl Kinetic Shell"
 		icon "icon/gat"
 		"turret turn" 1.5
-		"inaccuracy" 0.2
-		"velocity" 50
-		"lifetime" 120
+		"inaccuracy" 0.1
+		"velocity" 20
+		"lifetime" 480
 		"reload" 60
 		"firing energy" 12
 		"firing heat" 18
@@ -240,31 +240,32 @@ outfit "Octyl Stellar Scanner"
 	"unplunderable"
 	"required crew" 3
 	"bunks" 8
-	"cargo scan power" 50
-	"cargo scan speed" 0.1
-	"outfit scan power" 50
-	"outfit scan speed" 0.1
-	"tactical scan power" 50
-	"asteroid scan power" 50
+	"cargo scan power" 100
+	"cargo scan speed" 0.025
+	"outfit scan power" 100
+	"outfit scan speed" 0.025
+	"tactical scan power" 100
+	"asteroid scan power" 100
 	"turret mounts" -1
 	weapon
-		sprite "projectile/scanner fire"
-			"frame rate" .6
 		"hardpoint sprite" "hardpoint/octyl scanner"
-		sound "octyl grapple beam"
+		"hit effect" "scanner fire"
 		"inaccuracy" .2
 		"turret turn" 1.2
 		"velocity" 400
 		"lifetime" 1
-		"reload" 1
-		"firing energy" .63
-		"firing heat" 1.6
-		"shield damage" 3.1
-		"hull damage" 1.9
-		"heat damage" 1.1
-		"ion damage" .04
-	description "A massive telescopic facility which can also fire bursts of energy at targets."
-		
+		"reload" 9
+		"firing energy" 2
+		"firing heat" 5
+		"anti-missile" 9
+	description "A massive telescopic facility which can also fire bursts of energy at incoming targets."
+
+effect "scanner fire"
+	sprite "effect/scanner fire"
+		"frame rate" 15
+	sound "octyl shoot"
+	"lifetime" 12
+	"velocity scale" 1
 
 outfit "Octyl Shield Detonator"
 	category "Secondary Weapons"
@@ -301,7 +302,7 @@ outfit "Octyl Shield Detonator"
 		"ion damage" -7
 		"hit force" -10
 		"missile strength" 42
-	description
+	description "Most Octyl weaponry does significantly more damage to a ship's hull than its shields, since shielding is a very new concept to the Octyl. As such, this weapon was devised to quickly incapacitate a target and strip it of its shields."
 
 outfit "octyl charge opening"
 	weapon
@@ -340,4 +341,4 @@ outfit "Octyl Shield Charge"
 	thumbnail "outfit/octyl missile"
 	"mass" .125
 	"octyl charge capacity" -1
-	description
+	description "This little warhead functions similarly to shield generators you've seen before, until the built-in battery overcharges the structure, causing something like an electromagnetic shock to the local area, destabilizing nearby shields."
