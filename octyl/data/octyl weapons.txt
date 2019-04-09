@@ -125,7 +125,7 @@ outfit "Octyl Repulsor Cannon"
 	weapon
 		sprite "projectile/octyl bullet"
 		sound "explosion tiny"
-		"hit effect" "explosion tiny"
+		"hit effect" "tiny explosion"
 		ammo "Octyl Kinetic Shell"
 		icon "icon/gat"
 		"inaccuracy" 1
@@ -151,10 +151,10 @@ outfit "Octyl Spurner Turret"
 	"required crew" 1
 	"turret mounts" -1
 	weapon
-		"hardpoint sprite" "hardpoint/octyl turret
+		"hardpoint sprite" "hardpoint/octyl turret"
 		sprite "projectile/octyl bullet"
 		sound "explosion tiny"
-		"hit effect" "explosion tiny"
+		"hit effect" "tiny explosion"
 		ammo "Octyl Kinetic Shell"
 		icon "icon/gat"
 		"turret turn" 4
@@ -183,8 +183,8 @@ outfit "Octyl Deteriorator Turret"
 	weapon
 		sprite "projectile/octyl bullet"
 		sound "explosion tiny"
-		"hit effect" "explosion tiny"
-		"hardpoint sprite" "hardpoint/octyl turret
+		"hit effect" "tiny explosion"
+		"hardpoint sprite" "hardpoint/octyl turret"
 		ammo "Octyl Kinetic Shell"
 		icon "icon/gat"
 		"turret turn" 1.5
@@ -198,7 +198,7 @@ outfit "Octyl Deteriorator Turret"
 		"shield damage" 1000
 		"hull damage" 1500
 		"hit force" 120
-	description
+	description ``
 
 outfit "Octyl Kinetic Cache"
 	category "Ammunition"
@@ -208,20 +208,20 @@ outfit "Octyl Kinetic Cache"
 	"outfit space" -4
 	"ammo" "Octyl Kinetic Shell"
 	"octyl shell capacity" 125
-	description
+	description ``
 
 outfit "Octyl Kinetic Storage"
 	category "Ammunition"
-	cost
+	#cost		Currently is without a cost. 
 	thumbnail "outfit/octyl bullet storage"
 	"mass" 4
 	"outfit space" -34
 	"ammo" "Octyl Kinetic Shell"
 	"octyl shell capacity" 1500
-	description
+	description ``
 
 outfit "Octyl Kinetic Shell"
-	category "Ammunition
+	category "Ammunition"
 	cost 14
 	thumbnail "outfit/octyl bullet"
 	"mass" .02
@@ -237,7 +237,7 @@ outfit "Octyl Stellar Scanner"
 	"mass" 46
 	"outfit space" -46
 	"weapon capacity" -20
-	"unplunderable"
+	"unplunderable" 1
 	"required crew" 3
 	"bunks" 8
 	"cargo scan power" 100
@@ -324,7 +324,6 @@ outfit "octyl charge open"
 			"start frame" 3
 			"frame rate" 20
 			"no repeat"
-		"hit effect" 
 		"hit effect" "nuke explosion"
 		"die effect" "nuke explosion"
 		"lifetime" 12

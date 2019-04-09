@@ -294,12 +294,11 @@ mission "Octyl in Coalition space [3]"
 	description "Report to the Heliarch, and see what they want to do about the Octyl."
 	deadline 7 3.5
 	landing
+	source
+		not government Coalition
+		not government Heliarch
 	to offer
 		has "event: octyl physalia arrives"
-		not
-			or
-				government Coalition
-				government Heliarch
 		random < 30
 	destination "Ring of Friendship"
 	on offer
@@ -342,8 +341,8 @@ mission "Octyl in Coalition space [4]"
 
 
 mission "Octyl in Coalition space [5A]" #don't board, report back to the ring
-	name "Report back to the <destination>
-	description
+	name "Report back to the <destination>"
+	description `` #Placeholder empty description.
 	destination "Ring of Friendship"
 	to offer
 		has "Octyl in Coalition space [4]: done"
@@ -357,7 +356,7 @@ mission "Octyl in Coalition space [5A]" #don't board, report back to the ring
 
 mission "Octyl in Coalition space [5B]" #board, meet the Octyl in-person
 	name "Explore the <npc> more closely"
-	description
+	description `` #Placehoder empty description.
 	destination "Ring of Friendship"
 	to offer
 		has "Octyl in Coalition space [4]: done"
