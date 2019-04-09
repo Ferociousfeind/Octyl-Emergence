@@ -12,7 +12,7 @@ conversation "physalia exploration"
 	`	"Yes, but some unfortunate glitches it is known to experience," interjects a Kimek, "Slippery surfaces it cannot climb, pathfinding it struggles with."`
 	`	To demonstrate, the Kimek steps behind an Arach. It leaps into action, scuttling towards the Kimek, before slamming into one of the Arach's legs and tumbling onto its side. Its legs flail helplessly.`
 	label personal
-	`	"Play with it, please," offers the Arach, picking it up, "To understand its actions
+	`	"Play with it, please," offers the Arach, picking it up, "To understand its actions`
 
 
 	`[Board the physalia with a dozen researchers. Apparently, more ships will arrive as time goes on, with more specially-trained expedition teams. Expound on what those teams usually do?]`
