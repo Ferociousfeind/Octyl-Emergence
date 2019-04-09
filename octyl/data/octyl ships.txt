@@ -174,7 +174,7 @@ ship "Octyl Moschata"
 			"shield damage" 800
 			"hull damage" 400
 			"hit force" 1200
-		outfits
+		#outfits
 
 	turret 65 -73
 	turret -65 -73
@@ -183,7 +183,7 @@ ship "Octyl Moschata"
 	turret 35 114
 	turret -35 114
 	engine 0 40 1
-	description
+	#description
 
 ship "Octyl Nautilus"
 	sprite "ship/nautilus"
@@ -256,7 +256,7 @@ ship "Octyl Nautilus"
 	explode "small explosion" 30
 	explode "medium explosion" 10
 	explode "huge explosion" 3
-	"final explode" "final explosion huge"
+	"final explode" "final explosion large"
 	description "Instead of constructing vessels out of their limited materials, the Octyl transformed their neighboring asteroids and planetoids into spaceflight-capable megastructures."
 
 ship "Octyl Nautilus" "Octyl Nautilus (mission)"
@@ -273,7 +273,7 @@ ship "Octyl Nautilus" "Octyl Nautilus (mission)"
 		"Octyl Drum Battery"
 		"Octyl Ember Generator"
 		"Octyl Flash Geothermal" 2
-		"Octyl Millenium Luminance"
+		"Octyl Luminance Synchronizer"
 
 		"Octyl Generation Motor"
 
@@ -301,24 +301,24 @@ ship "Octyl Physalia"
 			"shield damage" 100000
 			"hull damage" 250000
 			"hit force" 300000
-		outfit
-			"Octyl Deteriorator Turret" 10
-			"Octyl Kinetic Shell" 13000
-			"Octyl Kinetic Storage" 7
-			"Octyl Hull Refit" 30
-			"Octyl Insectoid Restructurer" 10
-			"Octyl Patternbreaker" 5
+	outfits
+		"Octyl Deteriorator Turret" 10
+		"Octyl Kinetic Shell" 13000
+		"Octyl Kinetic Storage" 7
+		"Octyl Hull Refit" 30
+		"Octyl Insectoid Restructurer" 10
+		"Octyl Patternbreaker" 5
 
-			"Octyl Beam Geothermal" 5
-			"Octyl Flash Geothermal" 2
-			"Octyl Ray Geothermal"
-			"Octyl Flame Generator"
-			"Octyl Luminance Synchronizer" 2
-			"Octyl Dribble Battery"
-			"Octyl Drop Battery" 2
-			"Octyl Drum Battery"
+		"Octyl Beam Geothermal" 5
+		"Octyl Flash Geothermal" 2
+		"Octyl Ray Geothermal"
+		"Octyl Flame Generator"
+		"Octyl Luminance Synchronizer" 2
+		"Octyl Dribble Battery"
+		"Octyl Drop Battery" 2
+		"Octyl Drum Battery"
 
-			"Octyl Generation Motor" 3
+		"Octyl Generation Motor" 3
 
 	turret 0 -275
 	turret 163 -224
@@ -392,11 +392,11 @@ ship "Octyl Physalia"
 	explode "tiny explosion" 100
 	explode "large explosion" 10
 	explode "huge explosion" 4
-	"final explode" "final explosion huge"
+	"final explode" "final explosion large"
 	description ...
 
 ship "Octyl Physalia" "Octyl Physalia (mission)"
-	outfit
+	outfits
 		"Octyl Stellar Scanner" 5
 		"Octyl Deteriorator Turret" 5
 		"Octyl Kinetic Storage" 4
